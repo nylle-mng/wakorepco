@@ -704,8 +704,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             margin-top: 2rem;
-            position: relative;
-            z-index: 1;
         }
 
         .location-section, .hours-section {
@@ -758,23 +756,6 @@
 
         .contact-quick-info strong {
             color: #c41e3a;
-        }
-
-        .contact-quick-info a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        .contact-quick-info a:hover {
-            color: #5dade2;
-            border-bottom: 1px solid #5dade2;
-            text-decoration: none;
-        }
-
-        .contact-quick-info a:active {
-            color: #3498db;
         }
 
         .hours-grid {
@@ -849,8 +830,6 @@
             min-height: 100%;
             display: flex;
             flex-direction: column;
-            position: relative;
-            z-index: 5;
         }
 
         .contact-form-section h3 {
@@ -895,10 +874,6 @@
             font-size: 0.9rem;
             font-family: inherit;
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 10;
-            pointer-events: auto;
-            cursor: text;
         }
 
         .form-group input:focus,
@@ -939,9 +914,6 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(196,30,58,0.3);
-            position: relative;
-            z-index: 15;
-            pointer-events: auto;
         }
 
         .submit-btn:hover {
@@ -980,47 +952,6 @@
             background: rgba(231, 76, 60, 0.2);
             border: 1px solid rgba(231, 76, 60, 0.5);
             color: #e74c3c;
-        }
-
-        /* Debug: Ensure all form elements are clickable */
-        .contact-form * {
-            pointer-events: auto !important;
-            position: relative;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form button {
-            z-index: 100 !important;
-        }
-
-        /* Enhanced submit button states */
-        .submit-btn:disabled {
-            cursor: not-allowed;
-            transform: none !important;
-        }
-
-        .submit-btn.loading {
-            position: relative;
-        }
-
-        .submit-btn.loading::after {
-            content: '';
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 16px;
-            height: 16px;
-            border: 2px solid transparent;
-            border-top: 2px solid rgba(255,255,255,0.6);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: translateY(-50%) rotate(0deg); }
-            100% { transform: translateY(-50%) rotate(360deg); }
         }
 
         /* Footer */
@@ -1482,32 +1413,32 @@
             <!-- Side-by-Side Contact Layout -->
             <div class="contact-main-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-section" style="position: static; z-index: auto; pointer-events: auto;">
+                <div class="contact-form-section">
                     <h3>📧 Send us a Message</h3>
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgbvjvp" method="POST" style="pointer-events: auto;">
-                        <div class="form-group" style="pointer-events: auto;">
-                            <label for="name" style="pointer-events: none;">Your Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgbvjvp" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        <div class="form-group" style="pointer-events: auto;">
-                            <label for="email" style="pointer-events: none;">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                        <div class="form-group" style="pointer-events: auto;">
-                            <label for="subject" style="pointer-events: none;">Subject <span class="required">*</span></label>
-                            <input type="text" id="subject" name="subject" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
                         </div>
-                        <div class="form-group" style="pointer-events: auto;">
-                            <label for="message" style="pointer-events: none;">Your Message <span class="required">*</span></label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services..." style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;"></textarea>
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services..."></textarea>
                         </div>
                         <!-- Hidden fields for better form handling -->
                         <input type="hidden" name="_replyto" value="wakorepcohr@gmail.com">
                         <input type="hidden" name="_next" value="thank-you.html">
                         <input type="hidden" name="_subject" value="New inquiry from Wakorepco website">
                         
-                        <div class="form-submit" style="pointer-events: auto;">
-                            <button type="submit" class="submit-btn" style="pointer-events: auto !important; position: static; z-index: auto;">Send Message</button>
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">Send Message</button>
                             <div class="form-status" id="formStatus" style="display: none;"></div>
                         </div>
                     </form>
@@ -1534,9 +1465,9 @@
                         Biñan, Laguna, Philippines
                     </div>
                     <div class="contact-quick-info">
-                        <p><strong>📧 HR:</strong> <a href="mailto:wakorepcohr@gmail.com">wakorepcohr@gmail.com</a></p>
-                        <p><strong>📧 Sales:</strong> <a href="mailto:wmpc_sales@wakoseisakusyo.co.jp">wmpc_sales@wakoseisakusyo.co.jp</a></p>
-                        <p><strong>📧 Purchasing:</strong> <a href="mailto:wmpc_purchasing_sales@wakoseisakusyo.co.jp">wmpc_purchasing_sales@wakoseisakusyo.co.jp</a></p>
+                        <p><strong>📧 HR:</strong> wakorepcohr@gmail.com</p>
+                        <p><strong>📧 Sales:</strong> wmpc_sales@wakoseisakusyo.co.jp</p>
+                        <p><strong>📧 Purchasing:</strong> wmpc_purchasing_sales@wakoseisakusyo.co.jp</p>
                     </div>
                 </div>
             </div>
@@ -1615,10 +1546,9 @@
             });
         }
 
-        // Contact Form Handling with Formspree - Enhanced Debug Version
+        // Contact Form Handling with Formspree
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log('Form submission started...');
             
             const form = this;
             const formData = new FormData(form);
@@ -1626,23 +1556,13 @@
             const formStatus = document.getElementById('formStatus');
             const originalText = submitBtn.textContent;
             
-            // Debug: Log form data
-            console.log('Form action URL:', form.action);
-            console.log('Form data entries:');
-            for (let [key, value] of formData.entries()) {
-                console.log(key, value);
-            }
-            
             // Basic validation
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
             
-            console.log('Validation data:', { name, email, subject, message });
-            
             if (!name || !email || !subject || !message) {
-                console.log('Validation failed: Missing required fields');
                 showFormMessage('Please fill in all required fields.', 'error');
                 return;
             }
@@ -1650,24 +1570,15 @@
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                console.log('Validation failed: Invalid email format');
                 showFormMessage('Please enter a valid email address.', 'error');
                 return;
             }
             
-            console.log('Validation passed, submitting to Formspree...');
-            
             // Show loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            submitBtn.classList.add('loading');
-            submitBtn.style.opacity = '0.7';
-            
-            // Clear any previous messages
-            formStatus.style.display = 'none';
             
             // Submit to Formspree
-            console.log('Making fetch request...');
             fetch(form.action, {
                 method: form.method,
                 body: formData,
@@ -1675,97 +1586,37 @@
                     'Accept': 'application/json'
                 }
             }).then(response => {
-                console.log('Fetch response received:', response.status, response.statusText);
-                console.log('Response headers:', [...response.headers.entries()]);
-                
                 if (response.ok) {
-                    console.log('Form submitted successfully!');
                     showFormMessage('✅ Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
                     form.reset();
                 } else {
-                    console.log('Form submission failed with status:', response.status);
-                    response.text().then(text => {
-                        console.log('Error response body:', text);
-                        try {
-                            const data = JSON.parse(text);
-                            if (Object.hasOwnProperty.call(data, 'errors')) {
-                                showFormMessage('❌ There was a problem: ' + data["errors"].map(error => error["message"]).join(", "), 'error');
-                            } else {
-                                showFormMessage('❌ Form submission failed. Please try again or contact us directly.', 'error');
-                            }
-                        } catch (e) {
-                            showFormMessage('❌ Form submission failed (Status: ' + response.status + '). Please try again.', 'error');
+                    response.json().then(data => {
+                        if (Object.hasOwnProperty.call(data, 'errors')) {
+                            showFormMessage('❌ There was a problem submitting your form: ' + data["errors"].map(error => error["message"]).join(", "), 'error');
+                        } else {
+                            showFormMessage('❌ Oops! There was a problem submitting your form. Please try again.', 'error');
                         }
-                    }).catch(e => {
-                        console.log('Error parsing response:', e);
-                        showFormMessage('❌ Form submission failed. Please try again.', 'error');
                     });
                 }
             }).catch(error => {
-                console.log('Network error:', error);
                 showFormMessage('❌ Network error. Please check your connection and try again.', 'error');
             }).finally(() => {
-                console.log('Form submission completed, resetting button...');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                submitBtn.classList.remove('loading');
-                submitBtn.style.opacity = '1';
             });
         });
 
-        // Helper function to show form messages - Enhanced
+        // Helper function to show form messages
         function showFormMessage(message, type) {
-            console.log('Showing message:', type, message);
             const formStatus = document.getElementById('formStatus');
-            
-            if (!formStatus) {
-                console.error('Form status element not found!');
-                alert(message); // Fallback to alert
-                return;
-            }
-            
-            formStatus.innerHTML = message;
+            formStatus.textContent = message;
             formStatus.className = `form-status ${type}`;
             formStatus.style.display = 'block';
-            formStatus.style.opacity = '0';
             
-            // Fade in animation
             setTimeout(() => {
-                formStatus.style.transition = 'opacity 0.3s ease';
-                formStatus.style.opacity = '1';
-            }, 10);
-            
-            // Auto-hide after delay (longer for errors)
-            const hideDelay = type === 'error' ? 10000 : 8000;
-            setTimeout(() => {
-                formStatus.style.opacity = '0';
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 300);
-            }, hideDelay);
+                formStatus.style.display = 'none';
+            }, 8000);
         }
-
-        // Test function to verify form setup
-        function testFormSetup() {
-            console.log('=== FORM DEBUG INFO ===');
-            const form = document.getElementById('contactForm');
-            console.log('Form found:', !!form);
-            console.log('Form action:', form ? form.action : 'N/A');
-            console.log('Form method:', form ? form.method : 'N/A');
-            
-            const statusDiv = document.getElementById('formStatus');
-            console.log('Status div found:', !!statusDiv);
-            
-            const submitBtn = form ? form.querySelector('.submit-btn') : null;
-            console.log('Submit button found:', !!submitBtn);
-            console.log('=======================');
-        }
-
-        // Run test on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Page loaded, running form setup test...');
-            testFormSetup();
-        });
     </script>
 </body>
 
