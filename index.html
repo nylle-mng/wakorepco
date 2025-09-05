@@ -3,7 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wakorepco Manufacturing Philippines Corporation</title>
+    <title>Wakorepco Manufacturing Philippines Corporation | ISO 9001:2015 Certified Rubber & Mold Parts</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes in SEPZ Laguna. 20+ years experience, 1.8M+ parts monthly capacity, Japanese partnership with WAKO Manufacturing Co., Ltd.">
+    <meta name="keywords" content="rubber parts Philippines, mold parts manufacturer, precision tubes, ISO 9001:2015 certified, SEPZ Laguna, thermoplastic rubber, phenol resin, PVC tubes, manufacturing Philippines, Japanese quality">
+    <meta name="author" content="Wakorepco Manufacturing Philippines Corporation">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="PH-LAG">
+    <meta name="geo.placename" content="Biñan, Laguna, Philippines">
+    <meta name="geo.position" content="14.2860229;121.0687276">
+    <meta name="ICBM" content="14.2860229, 121.0687276">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Wakorepco Manufacturing Philippines Corporation | ISO Certified Rubber & Mold Parts">
+    <meta property="og:description" content="Leading manufacturer of rubber parts, mold components, and precision tubes. ISO 9001:2015 certified with 20+ years experience in SEPZ Laguna Technopark.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wakorepco.onrender.com">
+    <meta property="og:image" content="https://wakorepco.onrender.com/header-removebg-preview.png">
+    <meta property="og:site_name" content="Wakorepco Manufacturing Philippines Corporation">
+    <meta property="og:locale" content="en_PH">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wakorepco Manufacturing Philippines Corporation | ISO Certified Manufacturing">
+    <meta name="twitter:description" content="ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes in SEPZ Laguna Technopark.">
+    <meta name="twitter:image" content="https://wakorepco.onrender.com/header-removebg-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wakorepco.onrender.com">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Manufacturing",
+      "name": "Wakorepco Manufacturing Philippines Corporation",
+      "description": "ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes",
+      "url": "https://wakorepco.onrender.com",
+      "logo": "https://wakorepco.onrender.com/logo.png",
+      "image": "https://wakorepco.onrender.com/Building bg.jpg",
+      "telephone": "+63-49-502-7001",
+      "email": "wakorepcohr@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "142 East Main Avenue, Loop Phase 6",
+        "addressLocality": "Biñan",
+        "addressRegion": "Laguna",
+        "postalCode": "4024",
+        "addressCountry": "PH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 14.2860229,
+        "longitude": 121.0687276
+      },
+      "foundingDate": "2004-04-01",
+      "numberOfEmployees": "117",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "ISO 9001:2015 Certification",
+          "credentialCategory": "Quality Management System"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Rubber Parts Manufacturing"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Mold Parts Manufacturing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product", 
+            "name": "Precision Tubes Manufacturing"
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/wakorepco"
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -115,6 +211,36 @@
         .nav-links a:hover {
             background: linear-gradient(135deg, #3498db 0%, #5dade2 100%);
             transform: translateY(-1px);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #2c3e50;
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
 
         /* Hero Section */
@@ -549,6 +675,112 @@
         .product-info p {
             color: #7f8c8d;
             font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Product item interactivity */
+        .product-item {
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            pointer-events: auto;
+        }
+
+        .product-zoom-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(30,94,168,0.9);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-item:hover .product-zoom-icon {
+            opacity: 1;
+        }
+
+        /* Lightbox Styles */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-modal.show {
+            display: flex !important;
+        }
+
+        .lightbox-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            color: #666;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(255,255,255,0.9);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(196,30,58,0.9);
+            color: white;
+        }
+
+        #lightboxImage {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            background: #f8f9fa;
+        }
+
+        .lightbox-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .lightbox-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .lightbox-info p {
+            color: #7f8c8d;
             line-height: 1.6;
         }
 
@@ -999,10 +1231,10 @@
             background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
             color: white;
             border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
+            border-radius: 25px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
             box-shadow: 0 4px 20px rgba(30,94,168,0.3);
             opacity: 0;
@@ -1012,6 +1244,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 6px;
+            min-width: auto;
+        }
+
+        .back-to-top span:first-child {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .back-to-top-text {
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         .back-to-top.show {
@@ -1041,13 +1286,47 @@
                 text-align: center;
             }
 
+            /* Use smaller logo for mobile */
+            .logo-image {
+                content: url('logowako.png');
+                height: 60px;
+                width: auto;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
                 flex-direction: column;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 1000;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
             }
 
             .nav-links a {
                 border-right: none;
                 border-bottom: 1px solid #34495e;
+                padding: 1.5rem;
+                text-align: left;
+            }
+
+            .nav-links li:last-child a {
+                border-bottom: none;
             }
 
             .hero h1 {
@@ -1121,9 +1400,16 @@
             .back-to-top {
                 bottom: 20px;
                 right: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 18px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            .back-to-top span:first-child {
+                font-size: 16px;
+            }
+            
+            .back-to-top-text {
+                font-size: 10px;
             }
         }
     </style>
@@ -1144,6 +1430,11 @@
         </div>
         <nav>
             <div class="container">
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#about">COMPANY</a></li>
                     <li><a href="#philosophy">PHILOSOPHY</a></li>
@@ -1285,12 +1576,13 @@
 <div class="product-gallery">
     <h3 class="gallery-title">OUR PRODUCTS</h3>
     <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('thermoplastic-rubber.jpg', 'Thermoplastic Rubber Components', 'High-quality thermoplastic rubber components for automotive and industrial applications')">
             <div class="product-image">
-                <img src="images/thermoplastic-rubber.jpg" alt="Thermoplastic Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="thermoplastic-rubber.jpg" alt="Thermoplastic Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">RUBBER</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>Thermoplastic Rubber</h4>
@@ -1298,12 +1590,13 @@
             </div>
         </div>
         
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('cr-nbr-rubber.jpg', 'CR, NBR Rubber Components', 'Chloroprene and Nitrile rubber parts with excellent chemical resistance')">
             <div class="product-image">
-                <img src="images/cr-nbr-rubber.jpg" alt="CR, NBR Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="cr-nbr-rubber.jpg" alt="CR, NBR Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">RUBBER</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>CR, NBR Rubber</h4>
@@ -1311,12 +1604,13 @@
             </div>
         </div>
         
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('pps-pbt-nylon.jpg', 'PPS, PBT, Nylon Components', 'Engineering plastics components for high-performance applications')">
             <div class="product-image">
-                <img src="images/pps-pbt-nylon.jpg" alt="PPS, PBT, Nylon Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="pps-pbt-nylon.jpg" alt="PPS, PBT, Nylon Components" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">PLASTICS</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>PPS, PBT, Nylon</h4>
@@ -1324,12 +1618,13 @@
             </div>
         </div>
         
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('polypropylene.jpg', 'Polypropylene (PP) Components', 'Precision polypropylene components with consistent quality for various industrial applications')">
             <div class="product-image">
-                <img src="images/polypropylene.jpg" alt="Polypropylene Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="polypropylene.jpg" alt="Polypropylene Components" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">PLASTICS</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>Polypropylene (PP)</h4>
@@ -1337,12 +1632,13 @@
             </div>
         </div>
         
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('phenol-resin.jpg', 'Phenol Resin Components', 'Durable phenolic resin parts for electrical and automotive industries')">
             <div class="product-image">
-                <img src="images/phenol-resin.jpg" alt="Phenol Resin Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="phenol-resin.jpg" alt="Phenol Resin Components" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">RESIN</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>Phenol Resin</h4>
@@ -1350,12 +1646,13 @@
             </div>
         </div>
         
-        <div class="product-item">
+        <div class="product-item" onclick="openLightbox('pvc-tubes.jpg', 'PVC Tubes', 'Flexible PVC tubing in various colors and specifications')">
             <div class="product-image">
-                <img src="images/pvc-tubes.jpg" alt="PVC Tubes" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="pvc-tubes.jpg" alt="PVC Tubes" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="product-overlay">
                     <span class="product-category">TUBES</span>
                 </div>
+                <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
                 <h4>PVC Tubes</h4>
@@ -1485,7 +1782,22 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" onclick="scrollToTop()" title="Back to Top">↑</button>
+    <button class="back-to-top" onclick="scrollToTop()" title="Back to Top">
+        <span>↑</span>
+        <span class="back-to-top-text">Back to Top</span>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -1617,6 +1929,80 @@
                 formStatus.style.display = 'none';
             }, 8000);
         }
+
+        // Mobile menu functionality
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const mobileToggle = document.getElementById('mobileMenuToggle');
+            
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const mobileToggle = document.getElementById('mobileMenuToggle');
+                
+                navLinks.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Lightbox Functionality
+        function openLightbox(imageSrc, title, description) {
+            try {
+                const modal = document.getElementById('lightboxModal');
+                const image = document.getElementById('lightboxImage');
+                const titleEl = document.getElementById('lightboxTitle');
+                const descEl = document.getElementById('lightboxDescription');
+                
+                if (!modal || !image || !titleEl || !descEl) {
+                    console.error('Lightbox elements not found');
+                    return;
+                }
+                
+                image.src = imageSrc;
+                image.alt = title;
+                titleEl.textContent = title;
+                descEl.textContent = description;
+                
+                // Show the modal
+                modal.classList.add('show');
+                
+                // Prevent body scroll when lightbox is open
+                document.body.style.overflow = 'hidden';
+            } catch (error) {
+                console.error('Error opening lightbox:', error);
+            }
+        }
+
+        function closeLightbox() {
+            try {
+                const modal = document.getElementById('lightboxModal');
+                
+                if (!modal) {
+                    console.error('Lightbox modal not found');
+                    return;
+                }
+                
+                // Hide the modal
+                modal.classList.remove('show');
+                
+                // Restore body scroll
+                document.body.style.overflow = 'auto';
+            } catch (error) {
+                console.error('Error closing lightbox:', error);
+            }
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
     </script>
 </body>
 
