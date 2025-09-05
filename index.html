@@ -1,0 +1,1587 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakorepco Manufacturing Philippines Corporation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+          header {
+            background: #ffffff;
+            border-bottom: 3px solid #c41e3a;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-image {
+            height: 120px;
+            width: auto;
+            margin-right: 15px;
+        }
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .company-info h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .company-tagline {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .header-contact {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #34495e;
+        }
+
+        .header-contact div {
+            margin-bottom: 2px;
+        }
+
+        /* Navigation */
+          nav {
+            background: #2c3e50;
+            padding: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            flex: 1;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            border-right: 1px solid #34495e;
+        }
+
+        .nav-links li:last-child a {
+            border-right: none;
+        }
+
+        .nav-links a:hover {
+            background: linear-gradient(135deg, #3498db 0%, #5dade2 100%);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.3) 100%), 
+                        url('Building bg.jpg') center 20%/cover no-repeat;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="150" fill="url(%23a)"/><circle cx="800" cy="300" r="100" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #1e5ea8;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #5dade2;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        /* Company Information Grid */
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .company-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #ecf0f1;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .company-card h3 {
+            color: #1e5ea8;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .company-card p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .company-card strong {
+            color: #1e5ea8;
+        }
+
+        /* Company History Timeline */
+        .company-history {
+            margin-bottom: 4rem;
+        }
+
+        .history-text h3 {
+            font-size: 1.8rem;
+            color: #1e5ea8;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 80px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #3498db 0%, #1e5ea8 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 140px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(30,94,168,0.3);
+            z-index: 10;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+            margin-left: 20px;
+        }
+
+        .timeline-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #34495e;
+        }
+
+        .timeline-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-content strong {
+            color: #1e5ea8;
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .certification-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+
+        .cert-image {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(30,94,168,0.15);
+            border: 1px solid #e3f2fd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cert-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(30,94,168,0.2);
+        }
+
+        .cert-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .cert-image p {
+            font-size: 0.95rem;
+            color: #1e5ea8;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Company Statistics */
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(30,94,168,0.1);
+            border: 1px solid #e3f2fd;
+            border-top: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(30,94,168,0.15);
+        }
+
+        .stat-card .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e5ea8;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="50%" stop-color="%23ffffff" stop-opacity="0.05"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0.1"/></linearGradient></defs><path d="M0,200 Q250,150 500,200 T1000,200 V400 H0 Z" fill="url(%23wave)"/></svg>');
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        .philosophy-section .section-title,
+        .philosophy-section .section-subtitle {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .philosophy-card {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 2px;
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #c41e3a;
+        }
+
+        .philosophy-card p {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Product Gallery Styles */
+        .product-gallery {
+            margin-bottom: 3rem;
+        }
+
+        .gallery-title {
+            font-size: 1.8rem;
+            color: #1e5ea8;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #5dade2);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(30,94,168,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e3f2fd;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(30,94,168,0.2);
+        }
+
+        .product-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: #f8f9fa;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #1e5ea8, #3498db);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h4 {
+            color: #1e5ea8;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Products Table */
+        .products-section {
+            background: white;
+        }
+
+        .table-container {
+            background: white;
+            border: 1px solid #ecf0f1;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .table-header {
+            background: linear-gradient(135deg, #1e5ea8 0%, #2471a3 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+            padding: 1rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            color: #1e5ea8;
+            border-bottom: 2px solid #3498db;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 0.95rem;
+        }
+
+        tr:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        tr:hover {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f1f8ff 100%);
+        }
+
+        /* Facilities Section */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .facility-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e3f2fd;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 4px 20px rgba(30,94,168,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(30,94,168,0.15);
+        }
+
+        .facility-card h3 {
+            color: #1e5ea8;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .facility-card p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #3498db 0%, #5dade2 50%, #85c1e9 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><circle cx="100" cy="100" r="50" fill="%23ffffff" opacity="0.05"/><circle cx="900" cy="300" r="80" fill="%23ffffff" opacity="0.03"/><circle cx="500" cy="50" r="30" fill="%23ffffff" opacity="0.07"/></svg>');
+            z-index: 0;
+        }
+
+        .contact-section .section-title,
+        .contact-section .section-subtitle {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 2px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #c41e3a;
+        }
+
+        .contact-info {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-info strong {
+            color: white;
+        }
+
+        /* Side-by-Side Contact Layout */
+        .contact-main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .location-section, .hours-section {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+
+        .location-section h3, .hours-section h3 {
+            color: #c41e3a;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .map-container {
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .address-info {
+            text-align: center;
+            color: white;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .address-info strong {
+            color: #c41e3a;
+        }
+
+        .contact-quick-info {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border-left: 3px solid #c41e3a;
+        }
+
+        .contact-quick-info p {
+            color: white;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .contact-quick-info strong {
+            color: #c41e3a;
+        }
+
+        .hours-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hours-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 6px;
+            align-items: center;
+        }
+
+        .hours-item .day {
+            font-weight: 600;
+            color: white;
+        }
+
+        .hours-item .time {
+            color: #e8f4fd;
+            font-size: 0.9rem;
+        }
+
+        .hours-item .status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .status.open {
+            background: #27ae60;
+            color: white;
+        }
+
+        .status.appointment {
+            background: #f39c12;
+            color: white;
+        }
+
+        .status.closed {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .hours-highlight {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(196,30,58,0.2);
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(196,30,58,0.3);
+        }
+
+        .hours-highlight strong {
+            color: #c41e3a;
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form-section h3 {
+            color: #c41e3a;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            flex-grow: 1;
+        }
+
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .required {
+            color: #c41e3a;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #c41e3a 0%, #e74c3c 100%);
+            color: white;
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(196,30,58,0.3);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30,94,168,0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-note {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85rem;
+            text-align: center;
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1b4f96 0%, #0d2544 100%);
+            color: #e8f4fd;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 3px solid #c41e3a;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Certifications Badge */
+        .certifications {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e3f2fd;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(30,94,168,0.1);
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0 0.5rem;
+            box-shadow: 0 2px 10px rgba(30,94,168,0.3);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(30,94,168,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: linear-gradient(135deg, #c41e3a 0%, #e74c3c 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(196,30,58,0.4);
+        }
+
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .header-contact {
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .nav-links a {
+                border-right: none;
+                border-bottom: 1px solid #34495e;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .company-grid,
+            .philosophy-grid,
+            .contact-grid,
+            .certification-images,
+            .company-stats,
+            .contact-main-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+            }
+
+            .timeline-year {
+                left: 0;
+                width: 50px;
+                height: 50px;
+                font-size: 0.8rem;
+            }
+
+            .timeline-content {
+                margin-left: 10px;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="header-removebg-preview.png" alt="Wakorepco Manufacturing Philippines Corporation" class="logo-image">
+                </div>
+                <div class="header-contact">
+                    <div><strong>Tel:</strong> (049) 502-7001 / (049) 502-6575</div>
+                    <div><strong>Cel:</strong> +63 916 223 8011</div>
+                    <div><strong>Facebook Page:</strong> https://www.facebook.com/wakorepco/</div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#about">COMPANY</a></li>
+                    <li><a href="#philosophy">PHILOSOPHY</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#facilities">MACHINES</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>PRECISION MANUFACTURING EXCELLENCE</h1>
+            <p>ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">ISO</span>
+                    <span class="stat-label">9001:2015 Certified</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1.8M+</span>
+                    <span class="stat-label">Parts Monthly</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Production Ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title"><strong>COMPANY INFORMATION</strong></h2>
+            <p class="section-subtitle">Two Decades of Manufacturing Excellence | Since 2004</p>
+            
+            <!-- Company History -->
+            <div class="company-history">
+                <div class="history-content">
+                    <div class="history-text">
+                        <h3>Our Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2004</div>
+                                <div class="timeline-content">
+                                    <p><strong>Company Establishment:</strong> Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.</p>
+                                    <p>Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">2004</div>
+                                <div class="timeline-content">
+                                    <p><strong>Initial Operations:</strong> Started business operation on July 1, 2004 with only one (1) Machine Operator/Inspector, acquiring a total leased area of 306 square meters at Ryonan Electric Philippines Corporation. In October, began exporting to our mother company in Japan, Wako Manufacturing Co., Ltd.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">2009</div>
+                                <div class="timeline-content">
+                                    <p><strong>First Expansion:</strong> In January, Wakorepco occupied an additional 385 square meters of Ryonan property for office and production operations as order volumes increased.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">2012</div>
+                                <div class="timeline-content">
+                                    <p><strong>New Facility:</strong> Groundbreaking ceremony for Wakorepco's dedicated building at Phase 6 was held on January 17. From July to October, successful transition and consolidation of operations from two previous sites while maintaining uninterrupted customer service.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-year">2025</div>
+                                <div class="timeline-content">
+                                    <p><strong>Current Operations:</strong> Today, Wakorepco operates with 117 direct employees, producing an average of 41,132 pieces of rubber and mold parts daily, plus 14,192 meters of tube (as of 1st half of 2025).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="certifications-section">
+                <h3 class="section-subtitle" style="margin-bottom: 2rem; color: #1e5ea8;">Official Certifications & Registrations</h3>
+                <div class="certification-images">
+                    <div class="cert-image">
+                        <img src="peza.jpg" alt="PEZA Certificate of Registration" />
+                        <p>PEZA Certificate of Registration No. 04-22</p>
+                    </div>
+                    <div class="cert-image">
+                        <img src="iso.jpg" alt="ISO 9001:2015 Certificate" />
+                        <p>ISO 9001:2015 Management System Certificate</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section philosophy-section" id="philosophy">
+        <div class="container">
+            <h2 class="section-title">CORPORATE PHILOSOPHY</h2>
+            <p class="section-subtitle">Our commitment to excellence drives everything we do</p>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">VISION</h3>
+                    <p style="text-align: center;">To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is <span style="font-style: italic; font-weight: 600;">"the members' concerted efforts bring out the best."</span></p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">MISSION</h3>
+                    <p style="text-align: center;">Our company will produce excellent products and the fulfillment of customers' wishes and great satisfaction as our priority.</p>
+                </div>
+                
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">QUALITY POLICY</h3>
+                    <p style="text-align: center; margin-bottom: 1.5rem;"><strong style="color: #c41e3a; font-size: 1.1rem;">QUALITY IS THE HEART OF OUR BUSINESS.</strong></p>
+                    <p style="text-indent: 2rem;">Wakorepco is committed to provide rubber parts, mold parts and tubes that satisfy our customers and adhere to all other applicable requirements.</p>
+                    <p style="text-indent: 2rem;">We shall endeavor to provide quality products and services by ensuring conformance to established Quality Management System.</p>
+                    <p style="text-indent: 2rem;">We shall work as a team, support the organization's strategic direction through our Quality Objectives, assess performance, and strive towards continual improvement and learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">PRODUCT PORTFOLIO</h2>
+            <p class="section-subtitle">Comprehensive range of precision-engineered components</p>
+            
+        <!-- Replace your existing product gallery section with this: -->
+<div class="product-gallery">
+    <h3 class="gallery-title">OUR PRODUCTS</h3>
+    <div class="product-grid">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/thermoplastic-rubber.jpg" alt="Thermoplastic Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">RUBBER</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>Thermoplastic Rubber</h4>
+                <p>High-quality thermoplastic rubber components for automotive and industrial applications</p>
+            </div>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/cr-nbr-rubber.jpg" alt="CR, NBR Rubber Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">RUBBER</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>CR, NBR Rubber</h4>
+                <p>Chloroprene and Nitrile rubber parts with excellent chemical resistance</p>
+            </div>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/pps-pbt-nylon.jpg" alt="PPS, PBT, Nylon Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">PLASTICS</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>PPS, PBT, Nylon</h4>
+                <p>Engineering plastics components for high-performance applications</p>
+            </div>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/polypropylene.jpg" alt="Polypropylene Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">PLASTICS</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>Polypropylene (PP)</h4>
+                <p>Precision polypropylene components with consistent quality</p>
+            </div>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/phenol-resin.jpg" alt="Phenol Resin Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">RESIN</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>Phenol Resin</h4>
+                <p>Durable phenolic resin parts for electrical and automotive industries</p>
+            </div>
+        </div>
+        
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/pvc-tubes.jpg" alt="PVC Tubes" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-overlay">
+                    <span class="product-category">TUBES</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <h4>PVC Tubes</h4>
+                <p>Flexible PVC tubing in various colors and specifications</p>
+            </div>
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </section>
+
+    <section class="section" id="facilities">
+        <div class="container">
+            <h2 class="section-title">MACHINES</h2>
+            <p class="section-subtitle">State-of-the-art equipment for precision manufacturing</p>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <h3>Injection Molding</h3>
+                    <p>Nissei (120 ton), Matsuda (50 ton), Fanuc (50 ton), Sanjo (30 ton), Kawajiri, JSW (rotary), JSW - Complete range of injection molding capabilities for various part sizes and complexities.</p>
+                </div>
+                
+                <div class="facility-card">
+                    <h3>Press Operations</h3>
+                    <p>Tienfa (150 ton), Long Chang (150 ton) - High-capacity press machines for efficient production of rubber and plastic components with consistent quality.</p>
+                </div>
+                
+                <div class="facility-card">
+                    <h3>Precision Trimming</h3>
+                    <p>JAM trimming machines - Advanced trimming capabilities ensuring precise dimensional accuracy and clean finishing of all manufactured parts.</p>
+                </div>
+                
+                <div class="facility-card">
+                    <h3>Printing Operations</h3>
+                    <p>Winon printing machines - Professional marking and printing capabilities for product identification and traceability requirements.</p>
+                </div>
+                
+                <div class="facility-card">
+                    <h3>Extrusion Systems</h3>
+                    <p>Advanced extruder machines for continuous production of tubes and profiles with consistent wall thickness and dimensional accuracy.</p>
+                </div>
+                
+                <div class="facility-card">
+                    <h3>Quality Control Equipment</h3>
+                    <p>Measurescope, Height Gauge, Durometer, Insulation Resistance Tester, Digimatic Indicator, Digital Calipers, Dial Caliper, Outside Micrometer - Comprehensive quality assurance instrumentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT INFORMATION</h2>
+            <!-- Side-by-Side Contact Layout -->
+            <div class="contact-main-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h3>📧 Send us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services..."></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Location Section -->
+                <div class="location-section">
+                    <h3>📍 Location</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.947339847486!2d121.0664389!3d14.2860229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7ef5c667607%3A0xf719570a95df6d9c!2sWakorepco%20Manufacturing%20Philippines%20Corporation!5e0!3m2!1sen!2sph!4v1735674000000!5m2!1sen!2sph"
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="address-info">
+                        <strong>Manufacturing Facility:</strong><br>
+                        142 East Main Avenue, Loop Phase 6<br>
+                        SEPZ, Laguna Technopark<br>
+                        Biñan, Laguna, Philippines
+                    </div>
+                    <div class="contact-quick-info">
+                        <p><strong>📧 HR:</strong> wakorepcohr@gmail.com</p>
+                        <p><strong>📧 Sales:</strong> wmpc_sales@wakoseisakusyo.co.jp</p>
+                        <p><strong>📧 Purchasing:</strong> wmpc_purchasing_sales@wakoseisakusyo.co.jp</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Wakorepco Manufacturing Philippines Corporation. All rights reserved.</p>
+                <p>PEZA Registered | ISO 9001:2015 Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" title="Back to Top">↑</button>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active navigation state
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Create mailto link (fallback solution)
+            const emailSubject = encodeURIComponent(`Website Inquiry: ${subject}`);
+            const emailBody = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Subject: ${subject}\n\n` +
+                `Message:\n${message}\n\n` +
+                `---\nSent from Wakorepco website contact form`
+            );
+            
+            const mailtoLink = `mailto:wakorepcohr@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+            
+            // Show success message and open email client
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Opening Email Client...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+                
+                // Reset form after a delay
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    alert('Thank you for your message! Your email client should open with your message ready to send.');
+                }, 1000);
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
