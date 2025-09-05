@@ -1132,6 +1132,27 @@
             position: relative;
         }
 
+        /* Force map container to be interactive */
+        .contact-main-grid .location-section {
+            pointer-events: auto !important;
+            position: relative !important;
+            z-index: 999 !important;
+        }
+
+        .contact-main-grid .location-section .map-container {
+            pointer-events: auto !important;
+            position: relative !important;
+            z-index: 1000 !important;
+            transform: none !important;
+        }
+
+        .contact-main-grid .location-section .map-container iframe {
+            pointer-events: auto !important;
+            position: relative !important;
+            z-index: 1001 !important;
+            transform: none !important;
+        }
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
@@ -1766,17 +1787,18 @@
                 </div>
 
                 <!-- Location Section -->
-                <div class="location-section" style="pointer-events: auto !important; position: static; z-index: auto;">
+                <div class="location-section" style="pointer-events: auto !important; position: relative !important; z-index: 999 !important;">
                     <h3>📍 Location</h3>
-                    <div class="map-container" style="pointer-events: auto !important; position: static !important; z-index: auto !important;">
+                    <div class="map-container" style="pointer-events: auto !important; position: relative !important; z-index: 1000 !important; transform: none !important;">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.947339847486!2d121.0664389!3d14.2860229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7ef5c667607%3A0xf719570a95df6d9c!2sWakorepco%20Manufacturing%20Philippines%20Corporation!5e0!3m2!1sen!2sph!4v1735674000000!5m2!1sen!2sph"
                             width="100%" 
                             height="300" 
-                            style="border:0; border-radius: 8px; pointer-events: auto !important; position: static !important; z-index: auto !important;" 
+                            style="border:0; border-radius: 8px; pointer-events: auto !important; position: relative !important; z-index: 1001 !important; transform: none !important; touch-action: manipulation !important;" 
                             allowfullscreen="" 
                             referrerpolicy="no-referrer-when-downgrade"
-                            loading="lazy">
+                            loading="lazy"
+                            tabindex="0">
                         </iframe>
                     </div>
                     <div class="address-info">
@@ -2026,6 +2048,39 @@
             if (e.key === 'Escape') {
                 closeLightbox();
             }
+        });
+
+        // Test map clickability after page load
+        function testMapClickability() {
+            console.log('Testing map clickability...');
+            const mapContainer = document.querySelector('.map-container');
+            const iframe = document.querySelector('.map-container iframe');
+            
+            if (mapContainer && iframe) {
+                console.log('Map container found:', mapContainer);
+                console.log('Map container styles:', window.getComputedStyle(mapContainer));
+                console.log('Iframe found:', iframe);
+                console.log('Iframe styles:', window.getComputedStyle(iframe));
+                
+                // Force all interactive styles
+                mapContainer.style.pointerEvents = 'auto';
+                mapContainer.style.position = 'relative';
+                mapContainer.style.zIndex = '1000';
+                
+                iframe.style.pointerEvents = 'auto';
+                iframe.style.position = 'relative';
+                iframe.style.zIndex = '1001';
+                iframe.style.touchAction = 'manipulation';
+                
+                console.log('Map interactivity forced');
+            } else {
+                console.error('Map elements not found');
+            }
+        }
+
+        // Run map test after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(testMapClickability, 1000);
         });
     </script>
 </body>
