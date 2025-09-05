@@ -934,6 +934,26 @@
             font-style: italic;
         }
 
+        .form-status {
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .form-status.success {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid rgba(39, 174, 96, 0.5);
+            color: #27ae60;
+        }
+
+        .form-status.error {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(231, 76, 60, 0.5);
+            color: #e74c3c;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #1b4f96 0%, #0d2544 100%);
@@ -1395,7 +1415,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form-section">
                     <h3>📧 Send us a Message</h3>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name <span class="required">*</span></label>
                             <input type="text" id="name" name="name" required>
@@ -1412,8 +1432,14 @@
                             <label for="message">Your Message <span class="required">*</span></label>
                             <textarea id="message" name="message" rows="5" required placeholder="Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services..."></textarea>
                         </div>
+                        <!-- Hidden fields for better form handling -->
+                        <input type="hidden" name="_replyto" value="wakorepcohr@gmail.com">
+                        <input type="hidden" name="_next" value="thank-you.html">
+                        <input type="hidden" name="_subject" value="New inquiry from Wakorepco website">
+                        
                         <div class="form-submit">
                             <button type="submit" class="submit-btn">Send Message</button>
+                            <div class="form-status" id="formStatus" style="display: none;"></div>
                         </div>
                     </form>
                 </div>
@@ -1520,60 +1546,77 @@
             });
         }
 
-        // Contact Form Handling
+        // Contact Form Handling with Formspree
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            const formStatus = document.getElementById('formStatus');
+            const originalText = submitBtn.textContent;
+            
+            // Basic validation
             const name = formData.get('name');
             const email = formData.get('email');
             const subject = formData.get('subject');
             const message = formData.get('message');
             
-            // Basic validation
             if (!name || !email || !subject || !message) {
-                alert('Please fill in all required fields.');
+                showFormMessage('Please fill in all required fields.', 'error');
                 return;
             }
             
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
+                showFormMessage('Please enter a valid email address.', 'error');
                 return;
             }
             
-            // Create mailto link (fallback solution)
-            const emailSubject = encodeURIComponent(`Website Inquiry: ${subject}`);
-            const emailBody = encodeURIComponent(
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Subject: ${subject}\n\n` +
-                `Message:\n${message}\n\n` +
-                `---\nSent from Wakorepco website contact form`
-            );
-            
-            const mailtoLink = `mailto:wakorepcohr@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-            
-            // Show success message and open email client
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Opening Email Client...';
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            setTimeout(() => {
-                window.location.href = mailtoLink;
-                
-                // Reset form after a delay
-                setTimeout(() => {
-                    this.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    alert('Thank you for your message! Your email client should open with your message ready to send.');
-                }, 1000);
-            }, 500);
+            // Submit to Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showFormMessage('✅ Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwnProperty.call(data, 'errors')) {
+                            showFormMessage('❌ There was a problem submitting your form: ' + data["errors"].map(error => error["message"]).join(", "), 'error');
+                        } else {
+                            showFormMessage('❌ Oops! There was a problem submitting your form. Please try again.', 'error');
+                        }
+                    });
+                }
+            }).catch(error => {
+                showFormMessage('❌ Network error. Please check your connection and try again.', 'error');
+            }).finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
+
+        // Helper function to show form messages
+        function showFormMessage(message, type) {
+            const formStatus = document.getElementById('formStatus');
+            formStatus.textContent = message;
+            formStatus.className = `form-status ${type}`;
+            formStatus.style.display = 'block';
+            
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+            }, 8000);
+        }
     </script>
 </body>
 
