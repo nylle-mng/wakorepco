@@ -176,6 +176,41 @@
             margin-bottom: 2px;
         }
 
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 5px;
+            margin-top: 8px;
+            justify-content: flex-end;
+        }
+
+        .lang-btn {
+            background: rgba(30,94,168,0.1);
+            border: 2px solid rgba(30,94,168,0.3);
+            color: #1e5ea8;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .lang-btn:hover {
+            background: rgba(30,94,168,0.2);
+            border-color: rgba(30,94,168,0.5);
+            transform: translateY(-1px);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #1e5ea8 0%, #3498db 100%);
+            border-color: #1e5ea8;
+            color: white;
+        }
+
         /* Navigation */
           nav {
             background: #2c3e50;
@@ -614,7 +649,8 @@
 
         .philosophy-card p {
             line-height: 1.8;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
 
         /* Product Gallery Styles */
@@ -1361,6 +1397,16 @@
                 font-size: 0.8rem;
             }
 
+            .language-switcher {
+                justify-content: center !important;
+                margin-top: 8px !important;
+            }
+
+            .lang-btn {
+                font-size: 0.7rem !important;
+                padding: 3px 6px !important;
+            }
+
             /* Use smaller logo for mobile */
             .logo-image {
                 content: url('logowako.png');
@@ -1578,9 +1624,13 @@
                     <img src="header-removebg-preview.png" alt="Wakorepco Manufacturing Philippines Corporation" class="logo-image">
                 </div>
                 <div class="header-contact">
-                    <div><strong>Tel:</strong> (049) 502-7001 / (049) 502-6575</div>
-                    <div><strong>Cel:</strong> +63 916 223 8011</div>
-                    <div><strong>Facebook Page:</strong> https://www.facebook.com/wakorepco/</div>
+                    <div><strong data-translate="tel">Tel:</strong> (049) 502-7001 / (049) 502-6575</div>
+                    <div><strong data-translate="cel">Cel:</strong> +63 916 223 8011</div>
+                    <div><strong data-translate="facebook">Facebook Page:</strong> https://www.facebook.com/wakorepco/</div>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">🇺🇸 EN</button>
+                        <button class="lang-btn" onclick="switchLanguage('ja')" data-lang="ja">🇯🇵 JP</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1596,11 +1646,11 @@
                         <span>Navigation</span>
                         <span class="mobile-menu-close" onclick="closeMobileMenu()">×</span>
                     </li>
-                    <li><a href="#about">🏢 COMPANY</a></li>
-                    <li><a href="#philosophy">💡 PHILOSOPHY</a></li>
-                    <li><a href="#products">📦 PRODUCTS</a></li>
-                    <li><a href="#facilities">⚙️ MACHINES</a></li>
-                    <li><a href="#contact">📞 CONTACT</a></li>
+                    <li><a href="#about" data-translate="nav_company">🏢 COMPANY</a></li>
+                    <li><a href="#philosophy" data-translate="nav_philosophy">💡 PHILOSOPHY</a></li>
+                    <li><a href="#products" data-translate="nav_products">📦 PRODUCTS</a></li>
+                    <li><a href="#facilities" data-translate="nav_machines">⚙️ MACHINES</a></li>
+                    <li><a href="#contact" data-translate="nav_contact">📞 CONTACT</a></li>
                 </ul>
             </div>
         </nav>
@@ -1608,24 +1658,24 @@
 
     <section class="hero">
         <div class="container">
-            <h1>MANUFACTURING EXCELLENCE</h1>
-            <p>ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications</p>
+            <h1 data-translate="hero_title">MANUFACTURING EXCELLENCE</h1>
+            <p data-translate="hero_subtitle">ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">20+</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-label" data-translate="years_experience">Years Experience</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">ISO</span>
-                    <span class="stat-label">9001:2015 Certified</span>
+                    <span class="stat-label" data-translate="iso_certified">9001:2015 Certified</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">1.8M+</span>
-                    <span class="stat-label">Parts Monthly</span>
+                    <span class="stat-label" data-translate="parts_monthly">Parts Monthly</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">24/7</span>
-                    <span class="stat-label">Production Ready</span>
+                    <span class="stat-label" data-translate="production_ready">Production Ready</span>
                 </div>
             </div>
         </div>
@@ -1633,48 +1683,48 @@
 
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title"><strong>COMPANY INFORMATION</strong></h2>
+            <h2 class="section-title" data-translate="section_about"><strong>COMPANY INFORMATION</strong></h2>
             <p class="section-subtitle">Two Decades of Manufacturing Excellence | Since 2004</p>
             
             <!-- Company History -->
             <div class="company-history">
                 <div class="history-content">
                     <div class="history-text">
-                        <h3>Our Journey</h3>
+                        <h3 data-translate="our_journey_title">Our Journey</h3>
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-year">2004</div>
                                 <div class="timeline-content">
-                                    <p><strong>Company Establishment:</strong> Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.</p>
-                                    <p>Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).</p>
+                                    <p><strong data-translate="company_establishment">Company Establishment:</strong> <span data-translate="company_establishment_text">Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.</span></p>
+                                    <p data-translate="major_stockholders">Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).</p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-year">2004</div>
                                 <div class="timeline-content">
-                                    <p><strong>Initial Operations:</strong> Started business operation on July 1, 2004 with only one (1) Machine Operator/Inspector, acquiring a total leased area of 306 square meters at Ryonan Electric Philippines Corporation. In October, began exporting to our mother company in Japan, Wako Manufacturing Co., Ltd.</p>
+                                    <p><strong data-translate="initial_operations">Initial Operations:</strong> <span data-translate="initial_operations_text">Started business operation on July 1, 2004 with only one (1) Machine Operator/Inspector, acquiring a total leased area of 306 square meters at Ryonan Electric Philippines Corporation. In October, began exporting to our mother company in Japan, Wako Manufacturing Co., Ltd.</span></p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-year">2009</div>
                                 <div class="timeline-content">
-                                    <p><strong>First Expansion:</strong> In January, Wakorepco occupied an additional 385 square meters of Ryonan property for office and production operations as order volumes increased.</p>
+                                    <p><strong data-translate="first_expansion">First Expansion:</strong> <span data-translate="first_expansion_text">In January, Wakorepco occupied an additional 385 square meters of Ryonan property for office and production operations as order volumes increased.</span></p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-year">2012</div>
                                 <div class="timeline-content">
-                                    <p><strong>New Facility:</strong> Groundbreaking ceremony for Wakorepco's dedicated building at Phase 6 was held on January 17. From July to October, successful transition and consolidation of operations from two previous sites while maintaining uninterrupted customer service.</p>
+                                    <p><strong data-translate="new_facility">New Facility:</strong> <span data-translate="new_facility_text">Groundbreaking ceremony for Wakorepco's dedicated building at Phase 6 was held on January 17. From July to October, successful transition and consolidation of operations from two previous sites while maintaining uninterrupted customer service.</span></p>
                                 </div>
                             </div>
                             
                             <div class="timeline-item">
                                 <div class="timeline-year">2025</div>
                                 <div class="timeline-content">
-                                    <p><strong>Current Operations:</strong> Today, Wakorepco operates with 117 direct employees, producing an average of 41,132 pieces of rubber and mold parts daily, plus 14,192 meters of tube (as of 1st half of 2025).</p>
+                                    <p><strong data-translate="current_operations">Current Operations:</strong> <span data-translate="current_operations_text">Today, Wakorepco operates with 117 direct employees, producing an average of 41,132 pieces of rubber and mold parts daily, plus 14,192 meters of tube (as of 1st half of 2025).</span></p>
                                 </div>
                             </div>
                         </div>
@@ -1702,26 +1752,26 @@
 
     <section class="section philosophy-section" id="philosophy">
         <div class="container">
-            <h2 class="section-title">CORPORATE PHILOSOPHY</h2>
+            <h2 class="section-title" data-translate="section_philosophy">CORPORATE PHILOSOPHY</h2>
             <p class="section-subtitle">Our commitment to excellence drives everything we do</p>
             
             <div class="philosophy-grid">
                 <div class="philosophy-card">
-                    <h3 style="text-align: center;">VISION</h3>
-                    <p style="text-align: center;">To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is <span style="font-style: italic; font-weight: 600;">"the members' concerted efforts bring out the best."</span></p>
+                    <h3 style="text-align: center;" data-translate="vision_title">VISION</h3>
+                    <p style="text-align: center;" data-translate="vision_text">To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is "the members' concerted efforts bring out the best."</p>
                 </div>
                 
                 <div class="philosophy-card">
-                    <h3 style="text-align: center;">MISSION</h3>
-                    <p style="text-align: center;">Our company will produce excellent products and the fulfillment of customers' wishes and great satisfaction as our priority.</p>
+                    <h3 style="text-align: center;" data-translate="mission_title">MISSION</h3>
+                    <p style="text-align: center;" data-translate="mission_text">Our company will produce excellent products and the fulfillment of customers' wishes and great satisfaction as our priority.</p>
                 </div>
                 
                 <div class="philosophy-card">
-                    <h3 style="text-align: center;">QUALITY POLICY</h3>
-                    <p style="text-align: center; margin-bottom: 1.5rem;"><strong style="color: #c41e3a; font-size: 1.1rem;">QUALITY IS THE HEART OF OUR BUSINESS.</strong></p>
-                    <p style="text-indent: 2rem;">Wakorepco is committed to provide rubber parts, mold parts and tubes that satisfy our customers and adhere to all other applicable requirements.</p>
-                    <p style="text-indent: 2rem;">We shall endeavor to provide quality products and services by ensuring conformance to established Quality Management System.</p>
-                    <p style="text-indent: 2rem;">We shall work as a team, support the organization's strategic direction through our Quality Objectives, assess performance, and strive towards continual improvement and learning.</p>
+                    <h3 style="text-align: center;" data-translate="quality_policy_title">QUALITY POLICY</h3>
+                    <p style="text-align: center; margin-bottom: 1.5rem;"><strong style="color: #c41e3a; font-size: 1.1rem;" data-translate="quality_heart">QUALITY IS THE HEART OF OUR BUSINESS.</strong></p>
+                    <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text1">Wakorepco is committed to provide rubber parts, mold parts and tubes that satisfy our customers and adhere to all other applicable requirements.</p>
+                    <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text2">We shall endeavor to provide quality products and services by ensuring conformance to established Quality Management System.</p>
+                    <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text3">We shall work as a team, support the organization's strategic direction through our Quality Objectives, assess performance, and strive towards continual improvement and learning.</p>
                 </div>
             </div>
         </div>
@@ -1729,12 +1779,12 @@
 
     <section class="section section-alt products-section" id="products">
         <div class="container">
-            <h2 class="section-title">PRODUCT PORTFOLIO</h2>
+            <h2 class="section-title" data-translate="section_products">PRODUCT PORTFOLIO</h2>
             <p class="section-subtitle">Comprehensive range of precision-engineered components</p>
             
         <!-- Replace your existing product gallery section with this: -->
 <div class="product-gallery">
-    <h3 class="gallery-title">OUR PRODUCTS</h3>
+    <h3 class="gallery-title" data-translate="our_products_title">OUR PRODUCTS</h3>
     <div class="product-grid">
         <div class="product-item" onclick="openLightbox('thermoplastic-rubber.jpg', 'Thermoplastic Rubber Components', 'High-quality thermoplastic rubber components for automotive and industrial applications')">
             <div class="product-image">
@@ -1745,8 +1795,8 @@
                 <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
-                <h4>Thermoplastic Rubber</h4>
-                <p>High-quality thermoplastic rubber components for automotive and industrial applications</p>
+                <h4 data-translate="thermoplastic_rubber">Thermoplastic Rubber</h4>
+                <p data-translate="thermoplastic_rubber_desc">High-quality thermoplastic rubber components for automotive and industrial applications</p>
             </div>
         </div>
         
@@ -1759,8 +1809,8 @@
                 <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
-                <h4>CR, NBR Rubber</h4>
-                <p>Chloroprene and Nitrile rubber parts with excellent chemical resistance</p>
+                <h4 data-translate="cr_nbr_rubber">CR, NBR Rubber</h4>
+                <p data-translate="cr_nbr_rubber_desc">Chloroprene and Nitrile rubber parts with excellent chemical resistance</p>
             </div>
         </div>
         
@@ -1815,8 +1865,8 @@
                 <div class="product-zoom-icon">🔍</div>
             </div>
             <div class="product-info">
-                <h4>PVC Tubes</h4>
-                <p>Flexible PVC tubing in various colors and specifications</p>
+                <h4 data-translate="pvc_tubes">PVC Tubes</h4>
+                <p data-translate="pvc_tubes_desc">Flexible PVC tubing in various colors and specifications</p>
             </div>
         </div>
     </div>
@@ -1827,7 +1877,7 @@
 
     <section class="section" id="facilities">
         <div class="container">
-            <h2 class="section-title">MACHINES</h2>
+            <h2 class="section-title" data-translate="section_machines">MACHINES</h2>
             <p class="section-subtitle">State-of-the-art equipment for precision manufacturing</p>
             
             <div class="facilities-grid">
@@ -1866,27 +1916,27 @@
 
     <section class="section contact-section" id="contact">
         <div class="container">
-            <h2 class="section-title">CONTACT INFORMATION</h2>
+            <h2 class="section-title" data-translate="section_contact">CONTACT INFORMATION</h2>
             <!-- Side-by-Side Contact Layout -->
             <div class="contact-main-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-section" style="position: static; z-index: auto; pointer-events: auto;">
-                    <h3>📧 Send us a Message</h3>
+                    <h3 data-translate="send_message">📧 Send us a Message</h3>
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvgbvjvp" method="POST" style="pointer-events: auto;">
                         <div class="form-group" style="pointer-events: auto;">
-                            <label for="name" style="pointer-events: none;">Your Name <span class="required">*</span></label>
+                            <label for="name" style="pointer-events: none;" data-translate="your_name">Your Name <span class="required">*</span></label>
                             <input type="text" id="name" name="name" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
                         </div>
                         <div class="form-group" style="pointer-events: auto;">
-                            <label for="email" style="pointer-events: none;">Email <span class="required">*</span></label>
+                            <label for="email" style="pointer-events: none;" data-translate="email">Email <span class="required">*</span></label>
                             <input type="email" id="email" name="email" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
                         </div>
                         <div class="form-group" style="pointer-events: auto;">
-                            <label for="subject" style="pointer-events: none;">Subject <span class="required">*</span></label>
+                            <label for="subject" style="pointer-events: none;" data-translate="subject">Subject <span class="required">*</span></label>
                             <input type="text" id="subject" name="subject" required style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;">
                         </div>
                         <div class="form-group" style="pointer-events: auto;">
-                            <label for="message" style="pointer-events: none;">Your Message <span class="required">*</span></label>
+                            <label for="message" style="pointer-events: none;" data-translate="your_message">Your Message <span class="required">*</span></label>
                             <textarea id="message" name="message" rows="5" required placeholder="Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services..." style="pointer-events: auto !important; position: static; z-index: auto; background: rgba(255,255,255,0.15) !important; border: 2px solid rgba(255,255,255,0.3) !important; color: white !important;"></textarea>
                         </div>
                         <!-- Hidden fields for better form handling -->
@@ -1903,7 +1953,7 @@
 
                 <!-- Location Section -->
                 <div class="location-section" style="pointer-events: auto !important; position: relative !important; z-index: 999 !important;">
-                    <h3>📍 Location</h3>
+                    <h3 data-translate="location">📍 Location</h3>
                     <div class="map-container" style="pointer-events: auto !important; position: relative !important; z-index: 1000 !important; transform: none !important;">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.947339847486!2d121.0664389!3d14.2860229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7ef5c667607%3A0xf719570a95df6d9c!2sWakorepco%20Manufacturing%20Philippines%20Corporation!5e0!3m2!1sen!2sph!4v1735674000000!5m2!1sen!2sph"
@@ -1917,7 +1967,7 @@
                         </iframe>
                     </div>
                     <div class="address-info">
-                        <strong>Manufacturing Facility:</strong><br>
+                        <strong data-translate="manufacturing_facility">Manufacturing Facility:</strong><br>
                         142 East Main Avenue, Loop Phase 6<br>
                         SEPZ, Laguna Technopark<br>
                         Biñan, Laguna, Philippines
@@ -2060,7 +2110,8 @@
                 }
             }).then(response => {
                 if (response.ok) {
-                    showFormMessage('✅ Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
+                    const successMsg = translations[currentLanguage]?.thank_you_msg || '✅ Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.';
+                    showFormMessage(successMsg, 'success');
                     form.reset();
                 } else {
                     response.json().then(data => {
@@ -2233,6 +2284,220 @@
         // Run map test after page loads
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(testMapClickability, 1000);
+        });
+
+        // Multi-language support system
+        const translations = {
+            en: {
+                tel: 'Tel:',
+                cel: 'Cel:',
+                facebook: 'Facebook Page:',
+                company: '🏢 COMPANY',
+                philosophy: '💡 PHILOSOPHY', 
+                products: '📦 PRODUCTS',
+                machines: '⚙️ MACHINES',
+                contact: '📞 CONTACT',
+                hero_title: 'MANUFACTURING EXCELLENCE',
+                hero_subtitle: 'ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications',
+                years_experience: 'Years Experience',
+                iso_certified: '9001:2015 Certified',
+                parts_monthly: 'Parts Monthly',
+                section_about: 'COMPANY INFORMATION',
+                section_philosophy: 'CORPORATE PHILOSOPHY',
+                section_products: 'PRODUCT PORTFOLIO',
+                section_machines: 'MANUFACTURING FACILITIES',
+                section_contact: 'CONTACT INFORMATION',
+                send_message: '📧 Send us a Message',
+                location: '📍 Location',
+                your_name: 'Your Name',
+                email: 'Email',
+                subject: 'Subject',
+                your_message: 'Your Message',
+                send_btn: 'Send Message',
+                thank_you_msg: '✅ Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.',
+                manufacturing_facility: 'Manufacturing Facility:',
+                production_ready: 'Production Ready',
+                vision_title: 'VISION',
+                mission_title: 'MISSION',
+                quality_policy_title: 'QUALITY POLICY',
+                vision_text: 'To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is "the members\' concerted efforts bring out the best."',
+                mission_text: 'Our company will produce excellent products and the fulfillment of customers\' wishes and great satisfaction as our priority.',
+                quality_heart: 'QUALITY IS THE HEART OF OUR BUSINESS.',
+                quality_text1: 'Wakorepco is committed to provide rubber parts, mold parts and tubes that satisfy our customers and adhere to all other applicable requirements.',
+                quality_text2: 'We shall endeavor to provide quality products and services by ensuring conformance to established Quality Management System.',
+                quality_text3: 'We shall work as a team, support the organization\'s strategic direction through our Quality Objectives, assess performance, and strive towards continual improvement and learning.',
+                our_journey_title: 'Our Journey',
+                company_establishment: 'Company Establishment:',
+                company_establishment_text: 'Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.',
+                major_stockholders: 'Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).',
+                initial_operations: 'Initial Operations:',
+                initial_operations_text: 'Started business operation on July 1, 2004 with only one (1) Machine Operator/Inspector, acquiring a total leased area of 306 square meters at Ryonan Electric Philippines Corporation. In October, began exporting to our mother company in Japan, Wako Manufacturing Co., Ltd.',
+                first_expansion: 'First Expansion:',
+                first_expansion_text: 'In January, Wakorepco occupied an additional 385 square meters of Ryonan property for office and production operations as order volumes increased.',
+                new_facility: 'New Facility:',
+                new_facility_text: 'Groundbreaking ceremony for Wakorepco\'s dedicated building at Phase 6 was held on January 17. From July to October, successful transition and consolidation of operations from two previous sites while maintaining uninterrupted customer service.',
+                current_operations: 'Current Operations:',
+                current_operations_text: 'Today, Wakorepco operates with 117 direct employees, producing an average of 41,132 pieces of rubber and mold parts daily, plus 14,192 meters of tube (as of 1st half of 2025).',
+                our_products_title: 'OUR PRODUCTS',
+                thermoplastic_rubber: 'Thermoplastic Rubber',
+                thermoplastic_rubber_desc: 'High-quality thermoplastic rubber components for automotive and industrial applications',
+                cr_nbr_rubber: 'CR, NBR Rubber',
+                cr_nbr_rubber_desc: 'Chloroprene and Nitrile rubber parts with excellent chemical resistance',
+                silicone_rubber: 'Silicone Rubber',
+                silicone_rubber_desc: 'Temperature-resistant silicone rubber components for demanding applications',
+                epdm_rubber: 'EPDM Rubber',
+                epdm_rubber_desc: 'Weather-resistant EPDM rubber parts for outdoor and automotive use',
+                pvc_tubes: 'PVC Tubes',
+                pvc_tubes_desc: 'Flexible PVC tubing in various colors and specifications',
+                phenolic_resin: 'Phenolic Resin Parts',
+                phenolic_resin_desc: 'High-temperature resistant phenolic resin components for industrial machinery',
+                engineering_plastics: 'Engineering Plastics',
+                engineering_plastics_desc: 'PPS, PBT, and Nylon components for automotive and electronic applications',
+                nav_company: '🏢 COMPANY',
+                nav_philosophy: '💡 PHILOSOPHY', 
+                nav_products: '📦 PRODUCTS',
+                nav_machines: '⚙️ MACHINES',
+                nav_contact: '📞 CONTACT'
+            },
+            ja: {
+                tel: '電話:',
+                cel: '携帯:',
+                facebook: 'Facebookページ:',
+                company: '🏢 会社情報',
+                philosophy: '💡 企業理念',
+                products: '📦 製品情報',
+                machines: '⚙️ 製造設備',
+                contact: '📞 お問い合わせ',
+                hero_title: '精密製造技術の卓越性',
+                hero_subtitle: 'ISO 9001:2015認証取得。ゴム部品、金型部品、精密チューブの産業用アプリケーション専門メーカー',
+                years_experience: '年の実績',
+                iso_certified: '9001:2015認証取得',
+                parts_monthly: '月間生産部品数',
+                section_about: '会社情報',
+                section_philosophy: '企業理念',
+                section_products: '製品ポートフォリオ',
+                section_machines: '製造施設',
+                section_contact: 'お問い合わせ',
+                send_message: '📧 メッセージを送る',
+                location: '📍 所在地',
+                your_name: 'お名前',
+                email: 'メールアドレス',
+                subject: '件名',
+                your_message: 'メッセージ内容',
+                send_btn: '送信',
+                thank_you_msg: '✅ ありがとうございます！メッセージを正常に送信いたしました。24時間以内にご返答いたします。',
+                manufacturing_facility: '製造施設:',
+                production_ready: '生産準備完了',
+                vision_title: 'ビジョン',
+                mission_title: 'ミッション',
+                quality_policy_title: '品質方針',
+                vision_text: 'ゴム部品、金型部品、チューブの製造において第一位の企業となり、組織のメンバーの福利と道徳的水準を重視する。我々の基本原則は「メンバーの協調した努力が最高の結果をもたらす」である。',
+                mission_text: '当社は優秀な製品を生産し、顧客の願いの実現と大きな満足を最優先とします。',
+                quality_heart: '品質は我々のビジネスの心臓部です。',
+                quality_text1: 'Wakorepcoは、お客様を満足させ、その他すべての適用要求事項を遵守するゴム部品、金型部品、チューブの提供をお約束します。',
+                quality_text2: '確立された品質マネジメントシステムへの適合を確実にすることにより、品質の高い製品とサービスを提供するよう努めます。',
+                quality_text3: 'チームとして働き、品質目標を通じて組織の戦略的方向性を支援し、パフォーマンスを評価し、継続的改善と学習に向けて努力します。',
+                our_journey_title: '我々の歩み',
+                company_establishment: '会社設立:',
+                company_establishment_text: 'Wakorepco Manufacturing Philippines Corporationは2004年4月1日に設立され、2004年4月14日にフィリピン経済特区庁に登録されました。',
+                major_stockholders: '主要株主は日本のWAKO Manufacturing Co., Ltd.とRyonan Electric Philippines Corporation (REPCO)です。',
+                initial_operations: '初期事業:',
+                initial_operations_text: '2004年7月1日、機械オペレーター/検査員1名のみで事業を開始し、Ryonan Electric Philippines Corporationで306平方メートルの賃貸面積を取得。10月には日本の母会社Wako Manufacturing Co., Ltd.への輸出を開始。',
+                first_expansion: '第一次拡張:',
+                first_expansion_text: '1月、受注量の増加により、ワコレプコはオフィスと生産業務のためにRyonan物件の追加385平方メートルを占有しました。',
+                new_facility: '新施設:',
+                new_facility_text: 'フェーズ6でのワコレプコ専用建物の起工式が1月17日に開催されました。7月から10月まで、中断のない顧客サービスを維持しながら、以前の2つのサイトからの業務の成功した移行と統合を実施。',
+                current_operations: '現在の事業:',
+                current_operations_text: '現在、ワコレプコは117名の直接従業員で運営し、1日平均41,132個のゴム・金型部品と14,192メートルのチューブを生産しています（2025年上半期時点）。',
+                our_products_title: '製品情報',
+                thermoplastic_rubber: '熱可塑性ゴム',
+                thermoplastic_rubber_desc: '自動車・産業用途向けの高品質熱可塑性ゴム部品',
+                cr_nbr_rubber: 'CR・NBRゴム',
+                cr_nbr_rubber_desc: '優れた耐薬品性を持つクロロプレン・ニトリルゴム部品',
+                silicone_rubber: 'シリコンゴム',
+                silicone_rubber_desc: '要求の厳しい用途向けの耐温度性シリコンゴム部品',
+                epdm_rubber: 'EPDMゴム',
+                epdm_rubber_desc: '屋外・自動車用途向けの耐候性EPDMゴム部品',
+                pvc_tubes: 'PVCチューブ',
+                pvc_tubes_desc: '様々な色と仕様の柔軟なPVCチューブ',
+                phenolic_resin: 'フェノール樹脂部品',
+                phenolic_resin_desc: '産業機械向けの高温耐性フェノール樹脂部品',
+                engineering_plastics: 'エンジニアリングプラスチック',
+                engineering_plastics_desc: '自動車・電子機器向けのPPS、PBT、ナイロン部品',
+                nav_company: '🏢 会社情報',
+                nav_philosophy: '💡 企業理念',
+                nav_products: '📦 製品情報', 
+                nav_machines: '⚙️ 製造設備',
+                nav_contact: '📞 お問い合わせ'
+            }
+        };
+
+        // Current language state
+        let currentLanguage = 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            console.log('Switching to language:', lang);
+            currentLanguage = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update form placeholders and labels
+            updateFormTranslations(lang);
+            
+            // Store language preference
+            localStorage.setItem('wakorepco_language', lang);
+            
+            console.log('Language switched to:', lang);
+        }
+
+        // Function to update form translations
+        function updateFormTranslations(lang) {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email'); 
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            if (lang === 'ja') {
+                if (nameInput) nameInput.placeholder = 'お名前を入力してください';
+                if (emailInput) emailInput.placeholder = 'メールアドレスを入力してください';
+                if (subjectInput) subjectInput.placeholder = '件名を入力してください';
+                if (messageInput) messageInput.placeholder = 'お問い合わせ内容、製品仕様のご要望、製造サービスに関するご質問などをご記入ください...';
+                if (submitBtn) submitBtn.textContent = '送信';
+            } else {
+                if (nameInput) nameInput.placeholder = 'Enter your name';
+                if (emailInput) emailInput.placeholder = 'Enter your email';
+                if (subjectInput) subjectInput.placeholder = 'Enter subject';
+                if (messageInput) messageInput.placeholder = 'Please describe your inquiry, product specifications needed, or any questions you have about our manufacturing services...';
+                if (submitBtn) submitBtn.textContent = 'Send Message';
+            }
+        }
+
+        // Initialize language system
+        function initLanguageSystem() {
+            // Load saved language preference
+            const savedLang = localStorage.getItem('wakorepco_language') || 'en';
+            switchLanguage(savedLang);
+        }
+
+        // Initialize language system after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initLanguageSystem();
         });
     </script>
 </body>
