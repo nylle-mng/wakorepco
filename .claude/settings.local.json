@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "WebFetch(domain:www.wakoseisakusyo.jp)"
+      "WebFetch(domain:www.wakoseisakusyo.jp)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
