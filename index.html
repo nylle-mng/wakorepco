@@ -534,6 +534,18 @@
             color: #1e5ea8;
         }
 
+        /* Content Links */
+        p a {
+            color: #3498db;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        p a:hover {
+            color: #1e5ea8;
+            text-decoration: underline;
+        }
+
         /* Certifications Section */
         .certifications-section {
             margin: 4rem 0;
@@ -950,16 +962,8 @@
             line-height: 1.6;
         }
 
-        .facility-card .product-image {
+        #facilities .product-image {
             height: 500px;
-        }
-
-        .facility-card .product-details h4 {
-            color: #3498db;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-align: center;
-            margin: 1rem 0;
         }
 
         /* Contact Section */
@@ -1583,6 +1587,17 @@
                 gap: 2rem;
             }
 
+            .certification-images {
+                justify-items: center;
+                padding: 0 1rem;
+            }
+
+            .cert-image {
+                max-width: 350px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
             .timeline::before {
                 left: 30px;
             }
@@ -1627,6 +1642,16 @@
             th, td {
                 padding: 0.5rem;
                 font-size: 0.75rem;
+            }
+
+            .certification-images {
+                padding: 0 0.5rem;
+                gap: 1.5rem;
+            }
+
+            .cert-image {
+                max-width: 300px;
+                padding: 1.5rem;
             }
 
             .back-to-top {
@@ -1726,7 +1751,7 @@
                                 <div class="timeline-year">2004</div>
                                 <div class="timeline-content">
                                     <p><strong data-translate="company_establishment">Company Establishment:</strong> <span data-translate="company_establishment_text">Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.</span></p>
-                                    <p data-translate="major_stockholders">The company is a joint venture of Wako Manufacturing Co., Ltd. of Japan and Ryonan Electric Philippines Corporation, a manufacturer of automotive wire harness located at the Laguna Technopark, Binan, Laguna.</p>
+                                    <p data-translate="major_stockholders">The company is a joint venture of <a href="https://www.wakoseisakusyo.jp/" target="_blank" rel="noopener noreferrer">Wako Manufacturing Co., Ltd.</a> of Japan and Ryonan Electric Philippines Corporation, a manufacturer of automotive wire harness located at the Laguna Technopark, Binan, Laguna.</p>
                                 </div>
                             </div>
                             
@@ -1905,8 +1930,8 @@
         <div class="container">
             <h2 class="section-title" data-translate="section_machines">MACHINES</h2>
             
-            <div class="facilities-grid">
-                <div class="facility-card" onclick="openLightbox('Injection-Molding.jpg', 'Injection Molding', '')">
+            <div class="product-grid">
+                <div class="product-item" onclick="openLightbox('Injection-Molding.jpg', 'Injection Molding', '')">
                     <div class="product-image">
                         <img src="Injection-Molding.jpg" alt="Injection Molding" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="product-overlay">
@@ -1914,12 +1939,12 @@
                         </div>
                         <div class="product-zoom-icon">🔍</div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-info">
                         <h4>Injection Molding</h4>
                     </div>
                 </div>
                 
-                <div class="facility-card" onclick="openLightbox('Compression-molding.jpg', 'Compression Molding', '')">
+                <div class="product-item" onclick="openLightbox('Compression-molding.jpg', 'Compression Molding', '')">
                     <div class="product-image">
                         <img src="Compression-molding.jpg" alt="Compression Molding" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="product-overlay">
@@ -1927,12 +1952,12 @@
                         </div>
                         <div class="product-zoom-icon">🔍</div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-info">
                         <h4>Compression Molding</h4>
                     </div>
                 </div>
                 
-                <div class="facility-card" onclick="openLightbox('Extrusion.jpg', 'Extrusion', '')">
+                <div class="product-item" onclick="openLightbox('Extrusion.jpg', 'Extrusion', '')">
                     <div class="product-image">
                         <img src="Extrusion.jpg" alt="Extrusion" style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="product-overlay">
@@ -1940,7 +1965,7 @@
                         </div>
                         <div class="product-zoom-icon">🔍</div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-info">
                         <h4>Extrusion</h4>
                     </div>
                 </div>
