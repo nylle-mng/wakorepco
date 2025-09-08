@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wakorepco Manufacturing Philippines Corporation | ISO 9001:2015 Certified Rubber & Mold Parts</title>
+    <title>Wakorepco Manufacturing Philippines Corporation | PEZA Registered Rubber & Mold Parts Manufacturer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes in SEPZ Laguna. 20+ years experience, 1.8M+ parts monthly capacity, Japanese partnership with WAKO Manufacturing Co., Ltd.">
+    <meta name="description" content="PEZA registered manufacturer of rubber parts, molds parts, tubes and their components in Laguna Technopark. 20+ years experience, 1.8M+ parts monthly capacity, joint venture with WAKO Manufacturing Co., Ltd. Japan.">
     <meta name="keywords" content="rubber parts Philippines, mold parts manufacturer, precision tubes, ISO 9001:2015 certified, SEPZ Laguna, thermoplastic rubber, phenol resin, PVC tubes, manufacturing Philippines, Japanese quality">
     <meta name="author" content="Wakorepco Manufacturing Philippines Corporation">
     <meta name="robots" content="index, follow">
@@ -17,8 +17,8 @@
     <meta name="ICBM" content="14.2860229, 121.0687276">
     
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Wakorepco Manufacturing Philippines Corporation | ISO Certified Rubber & Mold Parts">
-    <meta property="og:description" content="Leading manufacturer of rubber parts, mold components, and precision tubes. ISO 9001:2015 certified with 20+ years experience in SEPZ Laguna Technopark.">
+    <meta property="og:title" content="Wakorepco Manufacturing Philippines Corporation | PEZA Registered Manufacturer">
+    <meta property="og:description" content="PEZA registered manufacturer of rubber parts, molds parts, tubes and their components. Joint venture with WAKO Manufacturing Co., Ltd. Japan, located at Laguna Technopark, Binan, Laguna.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wakorepco.onrender.com">
     <meta property="og:image" content="https://wakorepco.onrender.com/header-removebg-preview.png">
@@ -27,8 +27,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wakorepco Manufacturing Philippines Corporation | ISO Certified Manufacturing">
-    <meta name="twitter:description" content="ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes in SEPZ Laguna Technopark.">
+    <meta name="twitter:title" content="Wakorepco Manufacturing Philippines Corporation | PEZA Registered Manufacturing">
+    <meta name="twitter:description" content="PEZA registered manufacturer of rubber parts, molds parts, tubes and their components at Laguna Technopark, Binan, Laguna.">
     <meta name="twitter:image" content="https://wakorepco.onrender.com/header-removebg-preview.png">
     
     <!-- Favicon -->
@@ -44,7 +44,7 @@
       "@context": "https://schema.org",
       "@type": "Manufacturing",
       "name": "Wakorepco Manufacturing Philippines Corporation",
-      "description": "ISO 9001:2015 certified manufacturer of rubber parts, mold components, and precision tubes",
+      "description": "PEZA registered manufacturer of rubber parts, molds parts, tubes and their components",
       "url": "https://wakorepco.onrender.com",
       "logo": "https://wakorepco.onrender.com/logo.png",
       "image": "https://wakorepco.onrender.com/Building bg.jpg",
@@ -304,8 +304,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.3) 100%), 
-                        url('Building bg.jpg') center 20%/cover no-repeat;
+            background: url('Building bg.jpg') right 20%/cover no-repeat;
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -320,31 +319,43 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%, rgba(52, 152, 219, 0.4) 50%, rgba(52, 152, 219, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="150" fill="url(%23a)"/><circle cx="800" cy="300" r="100" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
             opacity: 0.3;
             z-index: 0;
         }
+
 
         .hero h1 {
             font-size: 2.8rem;
             font-weight: 300;
             margin-bottom: 1rem;
             letter-spacing: 1px;
-            position: relative;
-            z-index: 1;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.8;
-            position: relative;
-            z-index: 1;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9);
         }
 
         .hero-stats {
@@ -359,10 +370,10 @@
         .stat-item {
             text-align: center;
             padding: 1rem;
-            background: rgba(255,255,255,0.1);
+            background: rgba(52, 152, 219, 0.15);
             border-radius: 8px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(52, 152, 219, 0.3);
         }
 
         .stat-number {
@@ -394,6 +405,14 @@
             color: #1e5ea8;
             margin-bottom: 0.5rem;
             text-align: center;
+        }
+
+        .products-section .section-title {
+            margin-bottom: 3rem;
+        }
+
+        #facilities .section-title {
+            margin-bottom: 3rem;
         }
 
         .section-subtitle {
@@ -613,10 +632,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><defs><linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="50%" stop-color="%23ffffff" stop-opacity="0.05"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0.1"/></linearGradient></defs><path d="M0,200 Q250,150 500,200 T1000,200 V400 H0 Z" fill="url(%23wave)"/></svg>');
-            opacity: 0.6;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><circle cx="100" cy="100" r="50" fill="%23ffffff" opacity="0.05"/><circle cx="900" cy="300" r="80" fill="%23ffffff" opacity="0.03"/><circle cx="500" cy="50" r="30" fill="%23ffffff" opacity="0.07"/></svg>');
             z-index: 0;
         }
+
 
         .philosophy-section .section-title,
         .philosophy-section .section-subtitle {
@@ -650,7 +669,6 @@
         .philosophy-card p {
             line-height: 1.8;
             font-size: 1.1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
 
         /* Product Gallery Styles */
@@ -834,13 +852,13 @@
         }
 
         .lightbox-info h3 {
-            color: #2c3e50;
+            color: #3498db;
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
         .lightbox-info p {
-            color: #7f8c8d;
+            color: #3498db;
             line-height: 1.6;
         }
 
@@ -930,6 +948,18 @@
             color: #7f8c8d;
             font-size: 0.9rem;
             line-height: 1.6;
+        }
+
+        .facility-card .product-image {
+            height: 500px;
+        }
+
+        .facility-card .product-details h4 {
+            color: #3498db;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 1rem 0;
         }
 
         /* Contact Section */
@@ -1050,7 +1080,7 @@
 
         .contact-quick-info p {
             color: white;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin: 0.5rem 0;
             line-height: 1.6;
         }
@@ -1625,7 +1655,7 @@
                 </div>
                 <div class="header-contact">
                     <div><strong data-translate="tel">Tel:</strong> (049) 502-7001 / (049) 502-6575</div>
-                    <div><strong data-translate="cel">Cel:</strong> +63 916 223 8011</div>
+                    <div><strong data-translate="cel">Cell:</strong> +63 916 223 8011</div>
                     <div><strong data-translate="facebook">Facebook Page:</strong> https://www.facebook.com/wakorepco/</div>
                     <div class="language-switcher">
                         <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">🇺🇸 EN</button>
@@ -1659,7 +1689,7 @@
     <section class="hero">
         <div class="container">
             <h1 data-translate="hero_title">MANUFACTURING EXCELLENCE</h1>
-            <p data-translate="hero_subtitle">ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications</p>
+            <p data-translate="hero_subtitle">PEZA registered manufacturer of rubber parts, molds parts, tubes and their components.</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">20+</span>
@@ -1696,7 +1726,7 @@
                                 <div class="timeline-year">2004</div>
                                 <div class="timeline-content">
                                     <p><strong data-translate="company_establishment">Company Establishment:</strong> <span data-translate="company_establishment_text">Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.</span></p>
-                                    <p data-translate="major_stockholders">Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).</p>
+                                    <p data-translate="major_stockholders">The company is a joint venture of Wako Manufacturing Co., Ltd. of Japan and Ryonan Electric Philippines Corporation, a manufacturer of automotive wire harness located at the Laguna Technopark, Binan, Laguna.</p>
                                 </div>
                             </div>
                             
@@ -1757,18 +1787,16 @@
             
             <div class="philosophy-grid">
                 <div class="philosophy-card">
-                    <h3 style="text-align: center;" data-translate="vision_title">VISION</h3>
-                    <p style="text-align: center;" data-translate="vision_text">To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is "the members' concerted efforts bring out the best."</p>
-                </div>
-                
-                <div class="philosophy-card">
-                    <h3 style="text-align: center;" data-translate="mission_title">MISSION</h3>
+                    <h3 style="text-align: center; color: #e74c3c; margin-bottom: 1rem;" data-translate="vision_title">VISION</h3>
+                    <p style="text-align: center; margin-bottom: 2rem;" data-translate="vision_text">To be the No. 1 company that manufactures rubber parts, mold parts and tubes, while giving importance to the welfare and moral standards of the members of our organization. Our fundamental principle is "the members' concerted efforts bring out the best."</p>
+                    
+                    <h3 style="text-align: center; color: #e74c3c; margin-bottom: 1rem;" data-translate="mission_title">MISSION</h3>
                     <p style="text-align: center;" data-translate="mission_text">Our company will produce excellent products and the fulfillment of customers' wishes and great satisfaction as our priority.</p>
                 </div>
                 
                 <div class="philosophy-card">
                     <h3 style="text-align: center;" data-translate="quality_policy_title">QUALITY POLICY</h3>
-                    <p style="text-align: center; margin-bottom: 1.5rem;"><strong style="color: #c41e3a; font-size: 1.1rem; text-shadow: none;" data-translate="quality_heart">QUALITY IS THE HEART OF OUR BUSINESS.</strong></p>
+                    <p style="text-align: center; margin-bottom: 1.5rem;"><strong style="color: white; font-size: 1.1rem; text-shadow: none;" data-translate="quality_heart">QUALITY IS THE HEART OF OUR BUSINESS.</strong></p>
                     <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text1">Wakorepco is committed to provide rubber parts, mold parts and tubes that satisfy our customers and adhere to all other applicable requirements.</p>
                     <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text2">We shall endeavor to provide quality products and services by ensuring conformance to established Quality Management System.</p>
                     <p style="text-indent: 2rem; text-align: justify;" data-translate="quality_text3">We shall work as a team, support the organization's strategic direction through our Quality Objectives, assess performance, and strive towards continual improvement and learning.</p>
@@ -1780,11 +1808,9 @@
     <section class="section section-alt products-section" id="products">
         <div class="container">
             <h2 class="section-title" data-translate="section_products">PRODUCT PORTFOLIO</h2>
-            <p class="section-subtitle">Comprehensive range of precision-engineered components</p>
             
         <!-- Replace your existing product gallery section with this: -->
 <div class="product-gallery">
-    <h3 class="gallery-title" data-translate="our_products_title">OUR PRODUCTS</h3>
     <div class="product-grid">
         <div class="product-item" onclick="openLightbox('thermoplastic-rubber.jpg', 'Thermoplastic Rubber Components', 'High-quality thermoplastic rubber components for automotive and industrial applications')">
             <div class="product-image">
@@ -1878,38 +1904,47 @@
     <section class="section" id="facilities">
         <div class="container">
             <h2 class="section-title" data-translate="section_machines">MACHINES</h2>
-            <p class="section-subtitle">State-of-the-art equipment for precision manufacturing</p>
             
             <div class="facilities-grid">
-                <div class="facility-card">
-                    <h3>Injection Molding</h3>
-                    <p>Nissei (120 ton), Matsuda (50 ton), Fanuc (50 ton), Sanjo (30 ton), Kawajiri, JSW (rotary), JSW - Complete range of injection molding capabilities for various part sizes and complexities.</p>
+                <div class="facility-card" onclick="openLightbox('injection-molding.jpg', 'Injection Molding', '')">
+                    <div class="product-image">
+                        <img src="injection-molding.jpg" alt="Injection Molding" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="product-overlay">
+                            <span class="product-category">MOLDING</span>
+                        </div>
+                        <div class="product-zoom-icon">🔍</div>
+                    </div>
+                    <div class="product-details">
+                        <h4>Injection Molding</h4>
+                    </div>
                 </div>
                 
-                <div class="facility-card">
-                    <h3>Press Operations</h3>
-                    <p>Tienfa (150 ton), Long Chang (150 ton) - High-capacity press machines for efficient production of rubber and plastic components with consistent quality.</p>
+                <div class="facility-card" onclick="openLightbox('compression-molding.jpg', 'Compression Molding', '')">
+                    <div class="product-image">
+                        <img src="compression-molding.jpg" alt="Compression Molding" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="product-overlay">
+                            <span class="product-category">MOLDING</span>
+                        </div>
+                        <div class="product-zoom-icon">🔍</div>
+                    </div>
+                    <div class="product-details">
+                        <h4>Compression Molding</h4>
+                    </div>
                 </div>
                 
-                <div class="facility-card">
-                    <h3>Precision Trimming</h3>
-                    <p>JAM trimming machines - Advanced trimming capabilities ensuring precise dimensional accuracy and clean finishing of all manufactured parts.</p>
+                <div class="facility-card" onclick="openLightbox('extrusion.jpg', 'Extrusion', '')">
+                    <div class="product-image">
+                        <img src="extrusion.jpg" alt="Extrusion" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="product-overlay">
+                            <span class="product-category">EXTRUSION</span>
+                        </div>
+                        <div class="product-zoom-icon">🔍</div>
+                    </div>
+                    <div class="product-details">
+                        <h4>Extrusion</h4>
+                    </div>
                 </div>
                 
-                <div class="facility-card">
-                    <h3>Printing Operations</h3>
-                    <p>Winon printing machines - Professional marking and printing capabilities for product identification and traceability requirements.</p>
-                </div>
-                
-                <div class="facility-card">
-                    <h3>Extrusion Systems</h3>
-                    <p>Advanced extruder machines for continuous production of tubes and profiles with consistent wall thickness and dimensional accuracy.</p>
-                </div>
-                
-                <div class="facility-card">
-                    <h3>Quality Control Equipment</h3>
-                    <p>Measurescope, Height Gauge, Durometer, Insulation Resistance Tester, Digimatic Indicator, Digital Calipers, Dial Caliper, Outside Micrometer - Comprehensive quality assurance instrumentation.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -2290,7 +2325,7 @@
         const translations = {
             en: {
                 tel: 'Tel:',
-                cel: 'Cel:',
+                cel: 'Cell:',
                 facebook: 'Facebook Page:',
                 company: '🏢 COMPANY',
                 philosophy: '💡 PHILOSOPHY', 
@@ -2298,7 +2333,7 @@
                 machines: '⚙️ MACHINES',
                 contact: '📞 CONTACT',
                 hero_title: 'MANUFACTURING EXCELLENCE',
-                hero_subtitle: 'ISO 9001:2015 certified manufacturer specializing in rubber parts, mold components, and precision tubes for industrial applications',
+                hero_subtitle: 'PEZA registered manufacturer of rubber parts, molds parts, tubes and their components.',
                 years_experience: 'Years Experience',
                 iso_certified: '9001:2015 Certified',
                 parts_monthly: 'Parts Monthly',
@@ -2329,7 +2364,7 @@
                 our_journey_title: 'Our Journey',
                 company_establishment: 'Company Establishment:',
                 company_establishment_text: 'Wakorepco Manufacturing Philippines Corporation was established on April 1, 2004 and registered with the Philippine Economic Zone Authority on April 14, 2004.',
-                major_stockholders: 'Major stockholders are WAKO Manufacturing Co., Ltd. – Japan and Ryonan Electric Philippines Corporation (REPCO).',
+                major_stockholders: 'The company is a joint venture of Wako Manufacturing Co., Ltd. of Japan and Ryonan Electric Philippines Corporation, a manufacturer of automotive wire harness located at the Laguna Technopark, Binan, Laguna.',
                 initial_operations: 'Initial Operations:',
                 initial_operations_text: 'Started business operation on July 1, 2004 with only one (1) Machine Operator/Inspector, acquiring a total leased area of 306 square meters at Ryonan Electric Philippines Corporation. In October, began exporting to our mother company in Japan, Wako Manufacturing Co., Ltd.',
                 first_expansion: 'First Expansion:',
@@ -2369,7 +2404,7 @@
                 machines: '⚙️ 製造設備',
                 contact: '📞 お問い合わせ',
                 hero_title: '精密製造技術の卓越性',
-                hero_subtitle: 'ISO 9001:2015認証取得。ゴム部品、金型部品、精密チューブの産業用アプリケーション専門メーカー',
+                hero_subtitle: 'PEZA登録のゴム部品、金型部品、チューブおよびその部品の製造業者',
                 years_experience: '年の実績',
                 iso_certified: '9001:2015認証取得',
                 parts_monthly: '月間生産部品数',
@@ -2400,7 +2435,7 @@
                 our_journey_title: '我々の歩み',
                 company_establishment: '会社設立:',
                 company_establishment_text: 'Wakorepco Manufacturing Philippines Corporationは2004年4月1日に設立され、2004年4月14日にフィリピン経済特区庁に登録されました。',
-                major_stockholders: '主要株主は日本のWAKO Manufacturing Co., Ltd.とRyonan Electric Philippines Corporation (REPCO)です。',
+                major_stockholders: '当社は日本のWako Manufacturing Co., Ltd.とラグナ州ビニャンのラグナテクノパークに所在する自動車ワイヤーハーネスメーカーであるRyonan Electric Philippines Corporationの合弁会社です。',
                 initial_operations: '初期事業:',
                 initial_operations_text: '2004年7月1日、機械オペレーター/検査員1名のみで事業を開始し、Ryonan Electric Philippines Corporationで306平方メートルの賃貸面積を取得。10月には日本の母会社Wako Manufacturing Co., Ltd.への輸出を開始。',
                 first_expansion: '第一次拡張:',
