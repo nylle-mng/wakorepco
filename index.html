@@ -31,12 +31,26 @@
     <meta name="twitter:description" content="PEZA registered manufacturer of rubber parts, molds parts, tubes and their components at Laguna Technopark, Binan, Laguna.">
     <meta name="twitter:image" content="https://wakorepco.onrender.com/header-removebg-preview.png">
     
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="en" href="https://wakorepco.onrender.com/">
+    <link rel="alternate" hreflang="ja" href="https://wakorepco.onrender.com/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://wakorepco.onrender.com/">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://wakorepco.onrender.com">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEMP89RQ2Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NEMP89RQ2Q');
+    </script>
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -100,22 +114,25 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="header-removebg-preview.png" alt="Wakorepco Manufacturing Philippines Corporation" class="logo-image">
+                    <picture>
+                        <source srcset="header-removebg-preview.webp" type="image/webp">
+                        <img src="header-removebg-preview.png" alt="Wakorepco Manufacturing Philippines Corporation" class="logo-image">
+                    </picture>
                 </div>
                 <div class="header-contact">
                     <div><strong data-translate="tel">Tel:</strong> (049) 502-7001 / (049) 502-6575</div>
                     <div><strong data-translate="cel">Cell:</strong> +63 916 223 8011</div>
                     <div><strong data-translate="facebook">Facebook Page:</strong> https://www.facebook.com/wakorepco/</div>
                     <div class="language-switcher">
-                        <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">🇺🇸 EN</button>
-                        <button class="lang-btn" onclick="switchLanguage('ja')" data-lang="ja">🇯🇵 JP</button>
+                        <a href="./" class="lang-btn active">🇺🇸 EN</a>
+                        <a href="./ja/" class="lang-btn">🇯🇵 JP</a>
                     </div>
                 </div>
             </div>
@@ -223,7 +240,10 @@
                 <h3 class="section-subtitle" style="margin-bottom: 2rem; color: #1e5ea8;">Official Certifications & Registrations</h3>
                 <div class="certification-images">
                     <div class="cert-image">
+                        <picture>
+                        <source srcset="peza.webp" type="image/webp">
                         <img src="peza.jpg" loading="lazy" alt="PEZA Certificate of Registration" />
+                    </picture>
                         <p>PEZA Certificate of Registration No. 04-22</p>
                     </div>
                     <div class="cert-image">
@@ -326,7 +346,10 @@
         
         <div class="product-item" onclick="openLightbox('phenol-resin.jpg', 'Phenol Resin Components', 'Durable phenolic resin parts for electrical and automotive industries')">
             <div class="product-image">
-                <img src="phenol-resin.jpg" loading="lazy" alt="Phenol Resin Components" style="width: 100%; height: 100%; object-fit: cover;">
+                <picture>
+                    <source srcset="phenol-resin.webp" type="image/webp">
+                    <img src="phenol-resin.jpg" loading="lazy" alt="Phenol Resin Components" style="width: 100%; height: 100%; object-fit: cover;">
+                </picture>
                 <div class="product-overlay">
                     <span class="product-category">RESIN</span>
                 </div>
@@ -390,7 +413,10 @@
                 
                 <div class="product-item" onclick="openLightbox('Extrusion.jpg', 'Extrusion', '')">
                     <div class="product-image">
-                        <img src="Extrusion.jpg" loading="lazy" alt="Extrusion" style="width: 100%; height: 100%; object-fit: cover;">
+                        <picture>
+                    <source srcset="Extrusion.webp" type="image/webp">
+                    <img src="Extrusion.jpg" loading="lazy" alt="Extrusion" style="width: 100%; height: 100%; object-fit: cover;">
+                </picture>
                         <div class="product-overlay">
                             <span class="product-category">EXTRUSION</span>
                         </div>
@@ -501,10 +527,28 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
