@@ -323,7 +323,7 @@
             
             <div class="product-gallery">
                 <div class="product-grid">
-                    <div class="product-item" onclick="openLightbox('../thermoplastic-rubber.jpg', '熱可塑性ゴム部品', '自動車・産業用途向けの高品質熱可塑性ゴム部品')">
+                    <div class="product-item" onclick="openLightbox('../thermoplastic-rubber.jpg', '(Santoprene TPV)', '熱可塑性ゴム部品', '自動車・産業用途向けの高品質熱可塑性ゴム部品')">
                         <div class="product-image">
                             <picture>
                                 <source srcset="../thermoplastic-rubber.webp" type="image/webp">
@@ -336,15 +336,16 @@
                         </div>
                         <div class="product-info">
                             <h4>熱可塑性ゴム</h4>
+                            <h5 class="product-subtitle">(Santoprene TPV)</h5>
                             <p>自動車・産業用途向けの高品質熱可塑性ゴム部品</p>
                         </div>
                     </div>
                     
-                    <div class="product-item" onclick="openLightbox('../cr-nbr-rubber.jpg', 'CR・NBRゴム部品', '優れた耐薬品性を持つクロロプレン・ニトリルゴム部品')">
+                    <div class="product-item" onclick="openLightbox('../cr-nbr-rubber.jpg', '(EPDM, CR, NBR, FMK, EP, EPT)', '熱硬化性ゴム部品', '優れた耐薬品性を持つクロロプレン・ニトリルゴム部品')">
                         <div class="product-image">
                             <picture>
                                 <source srcset="../cr-nbr-rubber.webp" type="image/webp">
-                                <img src="../cr-nbr-rubber.jpg" loading="lazy" alt="CR・NBRゴム部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../cr-nbr-rubber.jpg" loading="lazy" alt="熱硬化性ゴム部品" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">ゴム</span>
@@ -352,16 +353,17 @@
                             <div class="product-zoom-icon">🔍</div>
                         </div>
                         <div class="product-info">
-                            <h4>CR・NBRゴム</h4>
+                            <h4>熱硬化性ゴム</h4>
+                            <h5 class="product-subtitle">(EPDM, CR, NBR, FMK, EP, EPT)</h5>
                             <p>優れた耐薬品性を持つクロロプレン・ニトリルゴム部品</p>
                         </div>
                     </div>
                     
-                    <div class="product-item" onclick="openLightbox('../pps-pbt-nylon.jpg', 'PPS・PBT・ナイロン部品', '高性能用途向けエンジニアリングプラスチック部品')">
+                    <div class="product-item" onclick="openLightbox('../pps-pbt-nylon.jpg', '(Nylon, PPS, PBT, PC, POM)', '熱可塑性樹脂部品', '高性能用途向けエンジニアリングプラスチック部品')">
                         <div class="product-image">
                             <picture>
                                 <source srcset="../pps-pbt-nylon.webp" type="image/webp">
-                                <img src="../pps-pbt-nylon.jpg" loading="lazy" alt="PPS・PBT・ナイロン部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../pps-pbt-nylon.jpg" loading="lazy" alt="熱可塑性樹脂部品" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">プラスチック</span>
@@ -369,7 +371,8 @@
                             <div class="product-zoom-icon">🔍</div>
                         </div>
                         <div class="product-info">
-                            <h4>PPS・PBT・ナイロン</h4>
+                            <h4>熱可塑性樹脂</h4>
+                            <h5 class="product-subtitle">(Nylon, PPS, PBT, PC, POM)</h5>
                             <p>高性能用途向けエンジニアリングプラスチック部品</p>
                         </div>
                     </div>
@@ -391,11 +394,11 @@
                         </div>
                     </div>
                     
-                    <div class="product-item" onclick="openLightbox('../phenol-resin.jpg', 'フェノール樹脂部品', '電気・自動車産業向けの耐久性あるフェノール樹脂部品')">
+                    <div class="product-item" onclick="openLightbox('../phenol-resin.jpg', '(Phenol)', '熱硬化性樹脂部品', '電気・自動車産業向けの耐久性あるフェノール樹脂部品')">
                         <div class="product-image">
                             <picture>
                                 <source srcset="../phenol-resin.webp" type="image/webp">
-                                <img src="../phenol-resin.jpg" loading="lazy" alt="フェノール樹脂部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../phenol-resin.jpg" loading="lazy" alt="熱硬化性樹脂部品" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">樹脂</span>
@@ -403,7 +406,8 @@
                             <div class="product-zoom-icon">🔍</div>
                         </div>
                         <div class="product-info">
-                            <h4>フェノール樹脂</h4>
+                            <h4>熱硬化性樹脂</h4>
+                            <h5 class="product-subtitle">(Phenol)</h5>
                             <p>電気・自動車産業向けの耐久性あるフェノール樹脂部品</p>
                         </div>
                     </div>
@@ -560,6 +564,7 @@
             <img id="lightboxImage" src="" alt="">
             <div class="lightbox-info">
                 <h3 id="lightboxTitle"></h3>
+                <h5 id="lightboxSubtitle" class="lightbox-subtitle"></h5>
                 <p id="lightboxDescription"></p>
             </div>
         </div>
@@ -567,4 +572,4 @@
 
     <script src="../main.min.js"></script>
 </body>
-</html>
+</html>l>
