@@ -187,10 +187,11 @@
         }
 
         // Lightbox Functionality
-        function openLightbox(imageSrc, title, description) {
+        function openLightbox(imageSrc, subtitle, title, description) {
             try {
                 const modal = document.getElementById('lightboxModal');
                 const image = document.getElementById('lightboxImage');
+                const subtitleEl = document.getElementById('lightboxSubtitle');
                 const titleEl = document.getElementById('lightboxTitle');
                 const descEl = document.getElementById('lightboxDescription');
                 
@@ -201,6 +202,7 @@
                 
                 image.src = imageSrc;
                 image.alt = title;
+                if (subtitleEl) subtitleEl.textContent = subtitle || '';
                 titleEl.textContent = title;
                 descEl.textContent = description;
                 

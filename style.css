@@ -652,11 +652,18 @@
             padding: 1.5rem;
         }
 
+        .product-info h5.product-subtitle {
+            color: #1e5ea8;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 0 0 0.5rem 0;
+        }
+
         .product-info h4 {
             color: #1e5ea8;
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
         }
 
         .product-info p {
@@ -758,6 +765,13 @@
         .lightbox-info {
             padding: 2rem;
             text-align: center;
+        }
+
+        .lightbox-info h5.lightbox-subtitle {
+            color: #1e5ea8;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0.25rem 0 0.5rem 0;
         }
 
         .lightbox-info h3 {
@@ -1310,6 +1324,14 @@
             transform: translateY(0);
         }
 
+        /* Tablet styles (iPad, etc.) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
@@ -1482,6 +1504,22 @@
             .contact-main-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                width: 100%;
+            }
+
+            .contact-form-section,
+            .location-section {
+                width: 100%;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-section .container {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
             }
 
             .certification-images {
