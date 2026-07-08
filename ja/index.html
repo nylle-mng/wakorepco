@@ -56,7 +56,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Manufacturing",
+      "@type": ["Corporation", "LocalBusiness"],
       "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社",
       "description": "PEZA登録ゴム部品、金型部品、チューブ製造業者",
       "url": "https://wakorepco.onrender.com/ja/",
@@ -111,6 +111,102 @@
       ],
       "sameAs": [
         "https://www.facebook.com/wakorepco"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org Product Catalog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "ワコレプコ 製品ポートフォリオ",
+      "description": "ワコレプコ・マニュファクチャリング・フィリピン株式会社が製造するゴム部品、金型部品、エンジニアリングプラスチック、PVCチューブ。",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "熱可塑性ゴム（Santoprene TPV）",
+            "category": "ゴム部品",
+            "image": "https://wakorepco.onrender.com/thermoplastic-rubber.jpg",
+            "description": "自動車・産業用途向けの高品質熱可塑性ゴム（Santoprene TPV）部品。",
+            "material": "Santoprene TPV",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "熱硬化性ゴム（EPDM, CR, NBR, FMK, EP, EPT）",
+            "category": "ゴム部品",
+            "image": "https://wakorepco.onrender.com/cr-nbr-rubber.jpg",
+            "description": "優れた耐薬品性を持つクロロプレン・ニトリル系熱硬化性ゴム部品。",
+            "material": "EPDM, CR, NBR, FMK, EP, EPT",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "熱可塑性樹脂（Nylon, PPS, PBT, PC, POM）",
+            "category": "エンジニアリングプラスチック",
+            "image": "https://wakorepco.onrender.com/pps-pbt-nylon.jpg",
+            "description": "高性能用途向けエンジニアリングプラスチック部品。",
+            "material": "Nylon, PPS, PBT, PC, POM",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "ポリプロピレン（PP）部品",
+            "category": "エンジニアリングプラスチック",
+            "image": "https://wakorepco.onrender.com/polypropylene.jpg",
+            "description": "各種産業用途向けの品質が安定した精密ポリプロピレン（PP）部品。",
+            "material": "ポリプロピレン（PP）",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "熱硬化性樹脂（Phenol）",
+            "category": "樹脂部品",
+            "image": "https://wakorepco.onrender.com/phenol-resin.jpg",
+            "description": "電気・自動車産業向けの耐久性あるフェノール樹脂部品。",
+            "material": "フェノール樹脂",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "PVCチューブ",
+            "category": "チューブ",
+            "image": "https://wakorepco.onrender.com/pvc-tubes.jpg",
+            "description": "様々な色と仕様の柔軟なPVCチューブ。",
+            "material": "PVC",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "ワコレプコ・マニュファクチャリング・フィリピン株式会社" }
+          }
+        }
       ]
     }
     </script>
@@ -320,14 +416,15 @@
     <section class="section section-alt products-section" id="products">
         <div class="container">
             <h2 class="section-title">製品ポートフォリオ</h2>
-            
+            <p class="section-subtitle">フィリピン・ラグナで製造する精密ゴム部品、金型部品、エンジニアリングプラスチック、PVCチューブ</p>
+
             <div class="product-gallery">
                 <div class="product-grid">
                     <div class="product-item" onclick="openLightbox('../thermoplastic-rubber.jpg', '(Santoprene TPV)', '熱可塑性ゴム部品', '自動車・産業用途向けの高品質熱可塑性ゴム部品')">
                         <div class="product-image">
                             <picture>
                                 <source srcset="../thermoplastic-rubber.webp" type="image/webp">
-                                <img src="../thermoplastic-rubber.jpg" loading="lazy" alt="熱可塑性ゴム部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../thermoplastic-rubber.jpg" loading="lazy" alt="熱可塑性ゴム（Santoprene TPV）成形部品｜ワコレプコ フィリピン製造" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">ゴム</span>
@@ -345,7 +442,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="../cr-nbr-rubber.webp" type="image/webp">
-                                <img src="../cr-nbr-rubber.jpg" loading="lazy" alt="熱硬化性ゴム部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../cr-nbr-rubber.jpg" loading="lazy" alt="熱硬化性ゴム部品（EPDM, CR, NBR, FMK）耐薬品性ゴム成形部品" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">ゴム</span>
@@ -363,7 +460,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="../pps-pbt-nylon.webp" type="image/webp">
-                                <img src="../pps-pbt-nylon.jpg" loading="lazy" alt="熱可塑性樹脂部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../pps-pbt-nylon.jpg" loading="lazy" alt="熱可塑性樹脂部品（Nylon, PPS, PBT, PC, POM）エンジニアリングプラスチック" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">プラスチック</span>
@@ -381,7 +478,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="../polypropylene.webp" type="image/webp">
-                                <img src="../polypropylene.jpg" loading="lazy" alt="ポリプロピレン部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../polypropylene.jpg" loading="lazy" alt="精密ポリプロピレン（PP）成形プラスチック部品" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">プラスチック</span>
@@ -398,7 +495,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="../phenol-resin.webp" type="image/webp">
-                                <img src="../phenol-resin.jpg" loading="lazy" alt="熱硬化性樹脂部品" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../phenol-resin.jpg" loading="lazy" alt="熱硬化性フェノール樹脂成形部品（電気・自動車用）" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">樹脂</span>
@@ -416,7 +513,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="../pvc-tubes.webp" type="image/webp">
-                                <img src="../pvc-tubes.jpg" loading="lazy" alt="PVCチューブ" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="../pvc-tubes.jpg" loading="lazy" alt="各種色・仕様の柔軟なPVCチューブ・チュービング" style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
                                 <span class="product-category">チューブ</span>
@@ -495,24 +592,6 @@
             <p class="section-subtitle">お問い合わせ・お見積もりはこちらから</p>
             
             <div class="contact-main-grid">
-                <div class="location-section">
-                    <h3>📍 所在地</h3>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.1234567890123!2d121.0687276!3d14.2860229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDE3JzA5LjciTiAxMjHCsDA0JzA3LjQiRQ!5e0!3m2!1sen!2sph!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="address-info">
-                        <strong>ワコレプコ・マニュファクチャリング・フィリピン株式会社</strong><br>
-                        142 East Main Avenue, Loop Phase 6<br>
-                        Laguna Technopark, Biñan, Laguna 4024<br>
-                        Philippines
-                    </div>
-                    <div class="contact-quick-info">
-                        <p><strong>📞 電話:</strong> (049) 502-7001 / (049) 502-6575</p>
-                        <p><strong>📱 携帯:</strong> +63 916 223 8011</p>
-                        <p><strong>✉️ メール:</strong> wakorepcohr@gmail.com</p>
-                    </div>
-                </div>
-                
                 <div class="contact-form-section">
                     <h3>📧 メッセージを送る</h3>
                     <form class="contact-form" action="https://formspree.io/f/xgvavgqj" method="POST">
@@ -534,10 +613,28 @@
                         </div>
                         <div class="form-submit">
                             <button type="submit" class="submit-btn">送信</button>
-                            <p class="form-note">✅ 営業日24時間以内にご返答いたします</p>
                         </div>
                         <div id="formStatus" class="form-status" style="display: none;"></div>
                     </form>
+                </div>
+
+                <div class="location-section">
+                    <h3>📍 所在地</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.1234567890123!2d121.0687276!3d14.2860229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDE3JzA5LjciTiAxMjHCsDA0JzA3LjQiRQ!5e0!3m2!1sen!2sph!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address-info">
+                        <strong>製造施設:</strong><br>
+                        142 East Main Avenue, Loop Phase 6<br>
+                        SEPZ, Laguna Technopark<br>
+                        Biñan, Laguna, Philippines
+                    </div>
+                    <div class="contact-quick-info">
+                        <p><strong>📧 人事:</strong><span><a href="mailto:wakorepcohr@gmail.com">wakorepcohr@gmail.com</a></span></p>
+                        <p><strong>📧 営業:</strong><span><a href="mailto:wmpc_sales@wakoseisakusyo.co.jp">wmpc_sales@wakoseisakusyo.co.jp</a></span></p>
+                        <p><strong>📧 購買:</strong><span><a href="mailto:wmpc_purchasing_sales@wakoseisakusyo.co.jp">wmpc_purchasing_sales@wakoseisakusyo.co.jp</a></span></p>
+                        <p><strong>📧 ワコー（日本）:</strong><span><a href="mailto:h-itoh@wakoseisakusyo.co.jp">h-itoh@wakoseisakusyo.co.jp</a><br><a href="mailto:ken-hirota@wakoseisakusyo.co.jp">ken-hirota@wakoseisakusyo.co.jp</a></span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -546,7 +643,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 ワコレプコ・マニュファクチャリング・フィリピン株式会社. All Rights Reserved.</p>
+                <p>&copy; 2026 ワコレプコ・マニュファクチャリング・フィリピン株式会社. All Rights Reserved.</p>
                 <p>PEZA登録製造業者 | ISO 9001:2015認証取得</p>
             </div>
         </div>
@@ -572,4 +669,4 @@
 
     <script src="../main.min.js"></script>
 </body>
-</html>l>
+</html>

@@ -62,7 +62,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Manufacturing",
+      "@type": ["Corporation", "LocalBusiness"],
       "name": "Wakorepco Manufacturing Philippines Corporation",
       "description": "PEZA registered manufacturer of rubber parts, molds parts, tubes and their components",
       "url": "https://wakorepco.onrender.com",
@@ -117,6 +117,102 @@
       ],
       "sameAs": [
         "https://www.facebook.com/wakorepco"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org Product Catalog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Wakorepco Product Portfolio",
+      "description": "Rubber parts, mold parts, engineering plastics and PVC tubes manufactured by Wakorepco Manufacturing Philippines Corporation.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Thermoplastic Rubber (Santoprene TPV)",
+            "category": "Rubber Parts",
+            "image": "https://wakorepco.onrender.com/thermoplastic-rubber.jpg",
+            "description": "High-quality thermoplastic rubber (Santoprene TPV) components for automotive and industrial applications.",
+            "material": "Santoprene TPV",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Thermosetting Rubber (EPDM, CR, NBR, FMK, EP, EPT)",
+            "category": "Rubber Parts",
+            "image": "https://wakorepco.onrender.com/cr-nbr-rubber.jpg",
+            "description": "Chloroprene and Nitrile thermosetting rubber parts with excellent chemical resistance.",
+            "material": "EPDM, CR, NBR, FMK, EP, EPT",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Thermoplastic Resin (Nylon, PPS, PBT, PC, POM)",
+            "category": "Engineering Plastics",
+            "image": "https://wakorepco.onrender.com/pps-pbt-nylon.jpg",
+            "description": "Engineering plastic components for high-performance applications.",
+            "material": "Nylon, PPS, PBT, PC, POM",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Polypropylene (PP) Components",
+            "category": "Engineering Plastics",
+            "image": "https://wakorepco.onrender.com/polypropylene.jpg",
+            "description": "Precision polypropylene (PP) components with consistent quality for various industrial applications.",
+            "material": "Polypropylene (PP)",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "Thermosetting Resin (Phenol)",
+            "category": "Resin Parts",
+            "image": "https://wakorepco.onrender.com/phenol-resin.jpg",
+            "description": "Durable phenolic resin parts for electrical and automotive industries.",
+            "material": "Phenol resin",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "PVC Tubes",
+            "category": "Tubes",
+            "image": "https://wakorepco.onrender.com/pvc-tubes.jpg",
+            "description": "Flexible PVC tubing in various colors and specifications.",
+            "material": "PVC",
+            "brand": { "@type": "Brand", "name": "Wakorepco" },
+            "manufacturer": { "@type": "Organization", "name": "Wakorepco Manufacturing Philippines Corporation" }
+          }
+        }
       ]
     }
     </script>
@@ -332,6 +428,7 @@
     <section class="section section-alt products-section" id="products">
         <div class="container">
             <h2 class="section-title" data-translate="section_products">PRODUCT PORTFOLIO</h2>
+            <p class="section-subtitle">Precision rubber parts, mold parts, engineering plastics and PVC tubes manufactured in Laguna, Philippines</p>
 
             <!-- Replace your existing product gallery section with this: -->
             <div class="product-gallery">
@@ -339,7 +436,7 @@
                     <div class="product-item"
                         onclick="openLightbox('thermoplastic-rubber.jpg', '(Santoprene TPV)', 'Thermoplastic Rubber Components', 'High-quality thermoplastic rubber components for automotive and industrial applications')">
                         <div class="product-image">
-                            <img src="thermoplastic-rubber.jpg" loading="lazy" alt="Thermoplastic Rubber Components"
+                            <img src="thermoplastic-rubber.jpg" loading="lazy" alt="Thermoplastic rubber (Santoprene TPV) molded components manufactured by Wakorepco Philippines"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="product-overlay">
                                 <span class="product-category">RUBBER</span>
@@ -357,7 +454,7 @@
                     <div class="product-item"
                         onclick="openLightbox('cr-nbr-rubber.jpg', '(EPDM, CR, NBR, FMK, EP, EPT)', 'Thermosetting Rubber Components', 'Chloroprene and Nitrile rubber parts with excellent chemical resistance')">
                         <div class="product-image">
-                            <img src="cr-nbr-rubber.jpg" loading="lazy" alt="Thermosetting Rubber Components"
+                            <img src="cr-nbr-rubber.jpg" loading="lazy" alt="Thermosetting rubber parts (EPDM, CR, NBR, FMK) with excellent chemical resistance"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="product-overlay">
                                 <span class="product-category">RUBBER</span>
@@ -375,7 +472,7 @@
                     <div class="product-item"
                         onclick="openLightbox('pps-pbt-nylon.jpg', '(Nylon, PPS, PBT, PC, POM)', 'Thermoplastic Resin Components', 'Engineering plastics components for high-performance applications')">
                         <div class="product-image">
-                            <img src="pps-pbt-nylon.jpg" loading="lazy" alt="Thermoplastic Resin Components"
+                            <img src="pps-pbt-nylon.jpg" loading="lazy" alt="Thermoplastic resin parts (Nylon, PPS, PBT, PC, POM) engineering plastic components"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="product-overlay">
                                 <span class="product-category">PLASTICS</span>
@@ -392,7 +489,7 @@
                     <div class="product-item"
                         onclick="openLightbox('polypropylene.jpg', 'Polypropylene (PP) Components', 'Precision polypropylene components with consistent quality for various industrial applications')">
                         <div class="product-image">
-                            <img src="polypropylene.jpg" loading="lazy" alt="Polypropylene Components"
+                            <img src="polypropylene.jpg" loading="lazy" alt="Precision polypropylene (PP) molded plastic components"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="product-overlay">
                                 <span class="product-category">PLASTICS</span>
@@ -410,7 +507,7 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="phenol-resin.webp" type="image/webp">
-                                <img src="phenol-resin.jpg" loading="lazy" alt="Thermosetting Resin Components"
+                                <img src="phenol-resin.jpg" loading="lazy" alt="Thermosetting phenol resin molded parts for electrical and automotive use"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                             </picture>
                             <div class="product-overlay">
@@ -428,7 +525,7 @@
                     <div class="product-item"
                         onclick="openLightbox('pvc-tubes.jpg', 'PVC Tubes', 'Flexible PVC tubing in various colors and specifications')">
                         <div class="product-image">
-                            <img src="pvc-tubes.jpg" loading="lazy" alt="PVC Tubes"
+                            <img src="pvc-tubes.jpg" loading="lazy" alt="Flexible PVC tubes and tubing in various colors and specifications"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="product-overlay">
                                 <span class="product-category">TUBES</span>
@@ -570,9 +667,10 @@
                         Biñan, Laguna, Philippines
                     </div>
                     <div class="contact-quick-info">
-                        <p><strong>📧 HR:</strong> wakorepcohr@gmail.com</p>
-                        <p><strong>📧 Sales:</strong> wmpc_sales@wakoseisakusyo.co.jp</p>
-                        <p><strong>📧 Purchasing:</strong> wmpc_purchasing_sales@wakoseisakusyo.co.jp</p>
+                        <p><strong>📧 HR:</strong><span><a href="mailto:wakorepcohr@gmail.com">wakorepcohr@gmail.com</a></span></p>
+                        <p><strong>📧 Sales:</strong><span><a href="mailto:wmpc_sales@wakoseisakusyo.co.jp">wmpc_sales@wakoseisakusyo.co.jp</a></span></p>
+                        <p><strong>📧 Purchasing:</strong><span><a href="mailto:wmpc_purchasing_sales@wakoseisakusyo.co.jp">wmpc_purchasing_sales@wakoseisakusyo.co.jp</a></span></p>
+                        <p><strong>📧 Wako Japan:</strong><span><a href="mailto:h-itoh@wakoseisakusyo.co.jp">h-itoh@wakoseisakusyo.co.jp</a><br><a href="mailto:ken-hirota@wakoseisakusyo.co.jp">ken-hirota@wakoseisakusyo.co.jp</a></span></p>
                     </div>
                 </div>
             </div>
@@ -583,7 +681,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Wakorepco Manufacturing Philippines Corporation. All rights reserved.</p>
+                <p>&copy; 2026 Wakorepco Manufacturing Philippines Corporation. All rights reserved.</p>
                 <p>PEZA Registered | ISO 9001:2015 Certified</p>
             </div>
         </div>
@@ -607,11 +705,6 @@
             </div>
         </div>
     </div>
-
-    <script src="main.min.js"></script>
-</body>
-
-</html>>
 
     <script src="main.min.js"></script>
 </body>
